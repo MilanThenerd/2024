@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="index-style.css">
+    <title>Profile creation</title>
+    <style>
+        
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .container h2 {
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .btn {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .btn:hover {
+            background-color: #3e8e41;
+        }
+        #propertyImage {
+            max-width: 100%;
+            height: auto;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body >
+    <nav class="navbar">
+        <img src ="logo.png" alt="TouchGrass logo" class="logo">  <!---- place the logo jpg here  -->
+   </nav>
+    <div class="container">
+        <h2>Create new User</h2>
+        <form id="AuctionCreator">
+            <div class="form-group">
+                <label for="name">Username</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="name">Password</label>
+                <input type="text" id="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="url">Image URL</label>
+                <input type="url" id="url" name="url" required oninput="updateImage()">
+            </div>
+            <div class="form-group">
+                <label for="url">Image URL</label>
+                <input type="url" id="url" required oninput="updateImage()">
+            </div>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn">Register</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        function updateImage() {
+            var imageUrl = document.getElementById('url').value;
+            var imgElement = document.getElementById('propertyImage');
+            imgElement.src = imageUrl;
+        }
+    </script>
+</body>
+</html>

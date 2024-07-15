@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .container input {
+            display: block;
+            margin: 10px auto;
+            padding: 10px;
+            width: 80%;
+        }
+        .container button {
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        a 
+        {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            height: 100%; 
+            width: 100%; 
+            text-align: center; 
+            line-height: inherit;
+        }
+
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Login Page</h2>
+        <form id="authForm">
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit" id="loginBtn">Login</button>
+            <a href="register.html">Register</a>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+            document.getElementById('authForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+
+            const data = {
+                type : "AuctionLogin",
+                email: email,
+                password: password
+            };
+
+            const authString = "u04948123" + ':' + "3918Milo";
+            const encodedAuthString = btoa(authString);
+
+            const headers = {
+                'Content-Type': 'application/json',
+                'Authorization': 'Basic ' + encodedAuthString
+            };
+            const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+
+            const response = await axios.post(proxyUrl + 'https://wheatley.cs.up.ac.za/u04948123/api.php', data,  { headers });
+            console.log(response.data);
+            if(response.data.status === 'success')
+            {
+                localStorage.setItem('user_id' , response.data.data.apikey)
+                window.location.href = "auctions.html";
+            }
+            else
+            {
+                alert(response.data.message);
+            }
+            });
+    </script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .container input {
+            display: block;
+            margin: 10px auto;
+            padding: 10px;
+            width: 80%;
+        }
+        .container button {
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        a 
+        {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            height: 100%; 
+            width: 100%; 
+            text-align: center; 
+            line-height: inherit;
+        }
+
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Register Page</h2>
+        <form id="authForm">
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="text" id="surname" placeholder="Surname" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <span><button type="submit" id="registerBtn">Register</button>
+            <a href="Login.html">Login</a></span>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+            document.getElementById('authForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const surname = document.getElementById('surname').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+
+            const data = {
+                type : "AuctionRegister",
+                name: name,
+                surname: surname,
+                email: email,
+                password: password
+            };
+            const headers = {
+                'Content-Type': 'application/json',
+            };
+            const response = await axios.post('http://localhost:3000/COS216/api.php', data,  { headers });
+            console.log(response.data);
+            if(response.data.status === 'success')
+            {
+                window.location.href = "login.html";
+            }
+            else
+            {
+                alert(response.data.message);
+            }
+            });
+    </script>
+</body>
+</html>

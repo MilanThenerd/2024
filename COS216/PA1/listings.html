@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Listings</title>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Pages</h2>
+            <ul>
+                <li><a href="listings.html" class="button-sidebar-active">Listings</a></li>
+                <li><a href="agents.html" class="button-sidebar">Agents</a></li>
+                <li><a href="calculator.html" class="button-sidebar">Calculator</a></li>
+                <li><a href="favourites.html" class="button-sidebar">Favourites</a></li>
+            </ul>
+        </div>
+        <div class="main-panel">
+            <div class="top-panel">
+                <a href="../index.html" class="button-main"><i class ="fa fa-home"></i></a>
+                <h2>Listings</h2>
+            </div>
+            <div class="filters-top">
+                <button class="sort-button">Sort</button>
+                <button class="buy-button">Rent</button>
+                <button class="rent-button">Buy</button>
+                <div class="search-container">
+                    <input type="text" placeholder="Search..." class="search-input">
+                    <button type="submit" class="search-button"><i class="fa fa-search"></i></button>
+                </div>
+            </div>
+            <div class="filters-bottom">
+                <div class="price-range">
+                    <h1>Price</h1>
+                    <input type="text" placeholder="Min." class="lower-bound-price-input">
+                    <h2>to</h2>
+                    <input type="text" placeholder="Max." class="upper-bound-price-input">
+                </div>
+                <div class="filters-check-box">
+                    <input type="checkbox" id="garage" name="garage" value="Garage">
+                    <label for="garage">Garage</label><br>
+                    <input type="checkbox" id="pool" name="pool" value="Pool">
+                    <label for="pool">Pool</label><br>
+                    <input type="checkbox" id="internet" name="internet" value="Internet">
+                    <label for="internet">Fibre Internet</label><br>
+                </div>
+            </div>
+            <div class="content">
+                <ul>
+                    <li>
+                        <a href="view.html" class="view-button">
+                            <img class="house-thumbnail" src="./properties/property_1.jpeg" alt="House 1">
+                        </a>
+                        <h1>5 Bedroom House in Wapadrand</h1>
+                        <div>Price: R69420</div>
+                        <div>Location: Wapadrand</div>
+                        <div>Bedrooms: 5</div>
+                        <div>Bathrooms: 4</div>
+                        <div class="house-interact-buttons">
+                            <button class="add-button"><i class="fa fa-heart"></i></button>
+                            <button class="contact-button"><i class="fa fa-phone"></i></button>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="view.html" class="view-button">
+                            <img class="house-thumbnail" src="./properties/property_2.jpeg" alt="House 2">
+                        </a>
+                        <h1>3 Bedroom House in Mooikloof</h1>
+                        <div>Price: R69420</div>
+                        <div>Location: Mooikloof</div>
+                        <div>Bedrooms: 3</div>
+                        <div>Bathrooms: 2</div>
+                        <div class="house-interact-buttons">
+                            <button class="add-button"><i class="fa fa-heart"></i></button>
+                            <button class="contact-button"><i class="fa fa-phone"></i></button>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="view.html" class="view-button">
+                            <img class="house-thumbnail" src="./properties/property_3.jpeg" alt="House 3">
+                        </a>
+                        <h1>5 Bedroom House in Amanzimtoti</h1>
+                        <div>Price: R69420</div>
+                        <div>Location: Amanzimtoti</div>
+                        <div>Bedrooms: 5</div>
+                        <div>Bathrooms: 3</div>
+                        <div class="house-interact-buttons">
+                            <button class="add-button"><i class="fa fa-heart"></i></button>
+                            <button class="contact-button"><i class="fa fa-phone"></i></button>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="view.html" class="view-button">
+                            <img class="house-thumbnail" src="./properties/property_4.jpeg" alt="House 4">
+                        </a>
+                        <h1>6 Bedroom House in Brooklyn</h1>
+                        <div>Price: R69420</div>
+                        <div>Location: Brooklyn</div>
+                        <div>Bedrooms: 6</div>
+                        <div>Bathrooms: 4</div>
+                        <div class="house-interact-buttons">
+                            <button class="add-button"><i class="fa fa-heart"></i></button>
+                            <button class="contact-button"><i class="fa fa-phone"></i></button>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="view.html" class="view-button">
+                            <img class="house-thumbnail" src="./properties/property_5.jpeg" alt="House 5">
+                        </a>
+                        <h1>4 Bedroom House in Groenkloof</h1>
+                        <div>Price: R69420</div>
+                        <div>Location: Groenkloof</div>
+                        <div>Bedrooms: 4</div>
+                        <div>Bathrooms: 3</div>
+                        <div class="house-interact-buttons">
+                            <button class="add-button"><i class="fa fa-heart"></i></button>
+                            <button class="contact-button"><i class="fa fa-phone"></i></button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

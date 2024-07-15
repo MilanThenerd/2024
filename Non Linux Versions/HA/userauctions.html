@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>My Auctions</title>
+</head>
+<body onload="initializeSocket() , load_auctions()">
+    <div class="container">
+        <div class="sidebar">
+            <h2>Pages</h2>
+            <ul>
+                <li><a href="auctions.html" class="button-sidebar">Auctions</a></li>
+                <li><a href="bids.html" class="button-sidebar">Bids</a></li>
+                <li><a href="userauctions.html" class="button-sidebar-active">My Auctions</a></li>
+            </ul>
+        </div>
+        <div class="main-panel">
+            <div class="top-panel">
+                <a href="login.html" class="button-main" onclick="logout()"><i class ="fa fa-home"></i></a>
+                <h2>My Auctions</h2>
+                <button class="button-main" onclick="setTheme(true)">Theme</button>
+            </div>
+            <div class="filters-top">
+                <div class="dropdown">
+                    <button class="sort-button">Sort</button>
+                    <div class="dropdown-content">
+                      <a href="#" onclick="load_auctions_price()">Highest Bid</a>
+                      <a href="#" onclick="load_auctions_title()">Title</a>
+                      <a href="#" onclick="load_auctions_loc()">Location</a>
+                      <a href="#" onclick="load_auctions_bed()">Bedrooms</a>
+                      <a href="#" onclick="load_auctions_bath()">Bathrooms</a>
+                      <a href="#" onclick="load_auctions_park()">Parking Space</a>
+                    </div> 
+                </div>
+                <button class="Waiting-button" onclick="load_listings_buy()">Waiting</button>
+                <button class="Ongoing-button" onclick="load_listings_rent()">Ongoing</button>
+                <button class="Done-button" onclick="load_listings_rent()">Done</button>
+                <div class="search-container">
+                    <input type="text" placeholder="Search..." class="search-input" id="search-input" oninput="load_auctions()">
+                    <button type="submit" class="search-button"  id="asc-desc" onclick="load_auctions()"><i id="asc-desc-icon" class="fa fa-angle-down"></i></button>
+                </div>
+            </div>
+            <div class="filters-bottom">
+                <div class="price-range">
+                  <h1>Price</h1>
+                  <input type="number" placeholder="0" class="lower-bound-price-input" id="price-min" oninput="load_auctions()" min="0">
+                  <h2>to</h2>
+                  <input type="number" placeholder="1000000" class="upper-bound-price-input" id="price-max" oninput="load_auctions()" min="0">
+                  <h1>Bedrooms</h1>
+                  <input type="number" placeholder="2" class="upper-bound-price-input" id="bedrooms" oninput="load_auctions()" min="0" max="20">
+                  <h1>Bathrooms</h1>
+                  <input type="number" placeholder="2" class="upper-bound-price-input" id="bathrooms" oninput="load_auctions()" min="0" max="20">
+                  <h1>Parking Spaces</h1>
+                  <input type="number" placeholder="2" class="upper-bound-price-input" id="parkingspaces" oninput="load_auctions()" min="0" max="20">
+                  <h1>per page</h1>
+                  <input type="number" placeholder="30" class="upper-bound-price-input" id="limits" oninput="load_auctions()" min="1" max="1000">
+                </div>
+            </div>
+            <div class="content">
+                <ul id="house-list">
+                  <li>
+                    <a href="create.html" ><button class="plus-button">+</button></a>
+                  </li>
+                </ul>
+            </div>
+            <div>
+                <footer class="footer">
+                    <div class="container">
+                      <div class="footer-logo">
+                        <img src="Google.png" alt="Stuff lol">
+                      </div>
+                      
+                      <div class="footer-nav">
+                        <ul>
+                          <li><button><a href="#">Home</a></button></li>
+                          <li><button><a href="#">About Us</a></button></li>
+                          <li><button><a href="#">Services</a></button></li>
+                          <li><button><a href="#">Portfolio</a></button></li>
+                          <li><button><a href="#">Blog</a></button></li>
+                          <li><button><a href="#">Contact Us</a></button></li>
+                        </ul>
+                      </div>
+                      
+                      <div class="footer-contact-info">
+                        <p>Address: Tuks</p>
+                        <p>Phone: 04948123</p>
+                        <p>Email: u04948123@tuks.co.za</p>
+                      </div>
+                      
+                      <div class="footer-social-links">
+                        <p>Follow Us:</p>
+                        <a href="#">Facebook</a> | 
+                        <a href="#">Twitter</a> | 
+                        <a href="#">Instagram</a> | 
+                        <a href="#">LinkedIn</a>
+                      </div>
+                      
+                      <div class="footer-newsletter">
+                        <p>Subscribe to our Newsletter:</p>
+                        <input type="email" placeholder="Enter your email">
+                        <button>Subscribe</button>
+                      </div>
+                      
+                      <div class="footer-copyright">
+                        <p>Copyright &copy; <span id="year">[Year]</span>Better than Google. All rights reserved.</p>
+                      </div>
+                    </div>
+                  </footer>
+            </div>
+        </div>
+
+        <div id="loading-container">
+            <img src="loading.gif" alt="Loading" />
+        </div>
+    </div>
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+    <script src="index.js" charset="UTF-8"></script>
+</body>
+</html>

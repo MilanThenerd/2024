@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auction Creator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .container h2 {
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .btn {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        #propertyImage {
+            max-width: 100%;
+            height: auto;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body onload="initializeSocket();">
+    <div class="container">
+        <h2>Auction Creator</h2>
+        <form id="AuctionCreator" method="POST">
+            <div class="form-group">
+                <label for="name">Auction Title</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="startDate">Start Date</label>
+                <input type="date" id="startDate" name="startDate" required>
+            </div>
+            <div class="form-group">
+                <label for="endDate">End Date</label>
+                <input type="date" id="endDate" name="endDate" required>
+            </div>
+            <div class="form-group">
+                <label for="state">State</label>
+                <input type="text" id="state" name="state" required>
+            </div>
+            <div class="form-group">
+                <label for="title">House Title</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+            <div class="form-group">
+                <label for="location">Location</label>
+                <input type="text" id="location" name="location" required>
+            </div>
+            <div class="form-group">
+                <label for="bedrooms">Bedroom Amount</label>
+                <input type="number" id="bedrooms" name="bedrooms" required>
+            </div>
+            <div class="form-group">
+                <label for="bathrooms">Bathroom Amount</label>
+                <input type="number" id="bathrooms" name="bathrooms" required>
+            </div>
+            <div class="form-group">
+                <label for="parking">Parking Space Amount</label>
+                <input type="number" id="parking" name="parking" required>
+            </div>
+            <div class="form-group">
+                <label for="amenities">Amenities</label>
+                <input type="text" id="amenities" name="amenities" required>
+                <small>Separate amenities with commas (e.g., Swimming pool, Gym, Garden)</small>
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea id="description" name="description" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="url">Image URL</label>
+                <input type="url" id="url" name="url" required oninput="updateImage()">
+            </div>
+            <div class="form-group">
+                <img id="propertyImage" src="" alt="Property Image">
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn">Register</button>
+            </div>
+        </form>
+    </div>
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="index.js" charset="UTF-8"></script>
+    <script>
+        function updateImage() {
+            var imageUrl = document.getElementById('url').value;
+            var imgElement = document.getElementById('propertyImage');
+            imgElement.src = imageUrl;
+        }
+        document.getElementById('AuctionCreator').addEventListener('submit', async function(event) {
+            event.preventDefault();
+
+            const user_id = localStorage.getItem("user_id");
+            const name = document.getElementById("name").value;
+            const startDate = document.getElementById("startDate").value;
+            const endDate = document.getElementById("endDate").value;
+            const state = document.getElementById("state").value;
+            const title = document.getElementById('title').value;
+            const location = document.getElementById('location').value;
+            const bedrooms = document.getElementById('bedrooms').value;
+            const bathrooms = document.getElementById('bathrooms').value;
+            const parking_spaces = document.getElementById('parking').value;
+            const amenities = document.getElementById('amenities').value;
+            const description = document.getElementById('description').value;
+            const image = document.getElementById('url').value;
+
+            let data = {
+                type : "CreateAuctionFull",
+                name: name,
+                startDate : startDate, 
+                endDate: endDate , 
+                state: state,
+                sellerID: user_id,
+                title: title,
+                location: location,
+                bedrooms: bedrooms,
+                bathrooms: bathrooms,
+                parking_spaces: parking_spaces,
+                amenities: amenities,
+                description: description,
+                image: image
+            };
+            await create_auction(data);
+            // window.location.href = 'userauctions.html';
+            });
+            
+    </script>
+</body>
+</html>
