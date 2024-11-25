@@ -1,0 +1,9 @@
+<map id="SmartThermostatIntegrator" name="SmartThermostatIntegrator">
+<area shape="rect" id="Node000001" title="The SmartThermostatIntegrator class bridges a smart thermostat with a legacy thermostat." alt="" coords="5,243,205,268"/>
+<area shape="rect" id="Node000002" href="$classSmartThermostat.html" title="The SmartThermostat class models a smart thermostat device." alt="" coords="37,168,173,193"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="108,208,108,242,103,242,103,208"/>
+<area shape="rect" id="Node000003" href="$classDevice.html" title="The Device class manages the state and identification of a sensor." alt="" coords="72,93,139,119"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="108,133,108,168,103,168,103,133"/>
+<area shape="rect" id="Node000004" href="$classDeviceState.html" title="The DeviceState class holds information about the device state." alt="" coords="55,5,156,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="108,45,108,93,103,93,103,45"/>
+</map>

@@ -1,0 +1,21 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$classDevice.html" title="The Device class manages the state and identification of a sensor." alt="" coords="5,129,72,155"/>
+<area shape="rect" id="Node000001" href="$classDoorlock.html" title="The Doorlock class represents a simulated door lock device." alt="" coords="148,5,228,31"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="52,116,80,77,118,40,147,26,149,30,122,44,84,80,56,119"/>
+<area shape="rect" id="Node000002" href="$classLight.html" title="The Light class represents a smart light device in a smart home system." alt="" coords="161,55,215,80"/>
+<area shape="poly" id="edge2_Node000000_Node000002" title=" " alt="" coords="68,119,119,89,159,73,161,78,121,94,71,124"/>
+<area shape="rect" id="Node000003" href="$classRoom.html" title="The Room class manages a collection of devices in a smart home environment." alt="" coords="158,104,218,129"/>
+<area shape="poly" id="edge3_Node000000_Node000003" title=" " alt="" coords="85,132,157,119,158,124,86,137"/>
+<area shape="rect" id="Node000004" href="$classSection.html" title="The Section class manages a collection of rooms in a smart home environment." alt="" coords="153,153,223,179"/>
+<area shape="poly" id="edge4_Node000000_Node000004" title=" " alt="" coords="86,147,153,158,152,163,85,152"/>
+<area shape="rect" id="Node000005" href="$classSensor.html" title="The Sensor class serves as a base for all sensor types in the system." alt="" coords="155,203,221,228"/>
+<area shape="poly" id="edge5_Node000000_Node000005" title=" " alt="" coords="72,160,121,188,156,202,154,207,119,192,69,164"/>
+<area shape="rect" id="Node000008" href="$classSmartThermostat.html" title="The SmartThermostat class models a smart thermostat device." alt="" coords="120,252,256,277"/>
+<area shape="poly" id="edge8_Node000000_Node000008" title=" " alt="" coords="57,165,85,202,122,237,145,250,142,254,118,241,81,206,53,168"/>
+<area shape="rect" id="Node000006" href="$classMotionSensor.html" title="The MotionSensor class simulates a motion sensor in a smart home system." alt="" coords="349,153,459,179"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="234,202,348,176,349,181,235,207"/>
+<area shape="rect" id="Node000007" href="$classTemperatureSensor.html" title="The TemperatureSensor class models a temperature sensor device." alt="" coords="330,203,478,228"/>
+<area shape="poly" id="edge7_Node000005_Node000007" title=" " alt="" coords="235,213,330,213,330,218,235,218"/>
+<area shape="rect" id="Node000009" href="$classSmartThermostatIntegrator.html" title="The SmartThermostatIntegrator class bridges a smart thermostat with a legacy thermostat." alt="" coords="304,252,504,277"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="270,262,304,262,304,267,270,267"/>
+</map>

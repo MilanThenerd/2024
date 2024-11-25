@@ -1,0 +1,5 @@
+<map id="Doorlock" name="Doorlock">
+<area shape="rect" id="Node000001" title="The Doorlock class represents a simulated door lock device." alt="" coords="5,79,85,104"/>
+<area shape="rect" id="Node000002" href="$classDevice.html" title="The Device class manages the state and identification of a sensor." alt="" coords="12,5,79,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="48,44,48,79,43,79,43,44"/>
+</map>

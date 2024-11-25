@@ -1,0 +1,119 @@
+\doxysection{Toggle\+On\+Command Class Reference}
+\hypertarget{classToggleOnCommand}{}\label{classToggleOnCommand}\index{ToggleOnCommand@{ToggleOnCommand}}
+
+
+The \doxylink{classToggleOnCommand}{Toggle\+On\+Command} class is responsible for toggling the on state of a device.  
+
+
+
+
+{\ttfamily \#include $<$Toggle\+On\+Command.\+h$>$}
+
+
+
+Inheritance diagram for Toggle\+On\+Command\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=192pt]{classToggleOnCommand__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Toggle\+On\+Command\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=192pt]{classToggleOnCommand__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classToggleOnCommand_a16b9300eb8e008c8264b005a0a490920}{Toggle\+On\+Command}} (\mbox{\hyperlink{classDevice}{Device}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classHomeCommand_a9528b6d06cfa9f4e98b2e7ba58e63e68}{receiver}}, bool is\+On, std\+::string \mbox{\hyperlink{classHomeCommand_a96685daad4ff20c75786b0191e026e45}{target}}="{}"{})
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classToggleOnCommand}{Toggle\+On\+Command} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classToggleOnCommand_a2fa4fb3ab7b3e843b9090fedb6cc26fd}{\texorpdfstring{$\sim$}{\string~}\+Toggle\+On\+Command}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \doxylink{classToggleOnCommand}{Toggle\+On\+Command} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classToggleOnCommand_a308c23ce0e97c2cf64a24a67e63e8cf9}{execute}} ()
+\begin{DoxyCompactList}\small\item\em Executes the command to toggle the device state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classHomeCommand}{Home\+Command}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classHomeCommand_adc75c50b5ee2fa3aa4a26729480d89bc}{Home\+Command}} (\mbox{\hyperlink{classDevice}{Device}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classHomeCommand_a9528b6d06cfa9f4e98b2e7ba58e63e68}{receiver}}, std\+::string \mbox{\hyperlink{classHomeCommand_a96685daad4ff20c75786b0191e026e45}{target}})
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classHomeCommand}{Home\+Command} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classHomeCommand_a0f94c8b8f174ac60dca1f6cfdfaa0824}{\texorpdfstring{$\sim$}{\string~}\+Home\+Command}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \doxylink{classHomeCommand}{Home\+Command} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classHomeCommand}{Home\+Command}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDevice}{Device}} \texorpdfstring{$\ast$}{*} {\bfseries receiver}
+\begin{DoxyCompactList}\small\item\em A pointer to the device that will execute the command. \end{DoxyCompactList}\item 
+std\+::string {\bfseries target}
+\begin{DoxyCompactList}\small\item\em The target on which the command will act. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{classToggleOnCommand}{Toggle\+On\+Command} class is responsible for toggling the on state of a device. 
+
+This class toggles the state of a device to "{}\+On"{} using \doxylink{classOnCommand}{On\+Command} and \doxylink{classOffCommand}{Off\+Command}.
+
+This command uses both \doxylink{classOnCommand}{On\+Command} and \doxylink{classOffCommand}{Off\+Command} to manage the device\textquotesingle{}s power state, allowing it to be turned on or off based on the current state.
+
+The \doxylink{classToggleOnCommand}{Toggle\+On\+Command} class allows a device to switch between on and off states, managing the state through \doxylink{classOnCommand}{On\+Command} and \doxylink{classOffCommand}{Off\+Command} instances. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classToggleOnCommand_a16b9300eb8e008c8264b005a0a490920}\label{classToggleOnCommand_a16b9300eb8e008c8264b005a0a490920} 
+\index{ToggleOnCommand@{ToggleOnCommand}!ToggleOnCommand@{ToggleOnCommand}}
+\index{ToggleOnCommand@{ToggleOnCommand}!ToggleOnCommand@{ToggleOnCommand}}
+\doxysubsubsection{\texorpdfstring{ToggleOnCommand()}{ToggleOnCommand()}}
+{\footnotesize\ttfamily Toggle\+On\+Command\+::\+Toggle\+On\+Command (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDevice}{Device}} \texorpdfstring{$\ast$}{*}}]{receiver,  }\item[{bool}]{is\+On,  }\item[{std\+::string}]{target = {\ttfamily "{}"{}} }\end{DoxyParamCaption})}
+
+
+
+Constructs a new \doxylink{classToggleOnCommand}{Toggle\+On\+Command} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em receiver} & A pointer to the device that will be controlled. \\
+\hline
+{\em is\+On} & A boolean indicating the initial state of the device (true for on, false for off). \\
+\hline
+{\em target} & A string representing the target of the command (default is an empty string). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classToggleOnCommand_a2fa4fb3ab7b3e843b9090fedb6cc26fd}\label{classToggleOnCommand_a2fa4fb3ab7b3e843b9090fedb6cc26fd} 
+\index{ToggleOnCommand@{ToggleOnCommand}!````~ToggleOnCommand@{\texorpdfstring{$\sim$}{\string~}ToggleOnCommand}}
+\index{````~ToggleOnCommand@{\texorpdfstring{$\sim$}{\string~}ToggleOnCommand}!ToggleOnCommand@{ToggleOnCommand}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ToggleOnCommand()}{\string~ToggleOnCommand()}}
+{\footnotesize\ttfamily Toggle\+On\+Command\+::\texorpdfstring{$\sim$}{\string~}\+Toggle\+On\+Command (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destroys the \doxylink{classToggleOnCommand}{Toggle\+On\+Command} object. 
+
+This destructor cleans up any allocated resources for the command. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classToggleOnCommand_a308c23ce0e97c2cf64a24a67e63e8cf9}\label{classToggleOnCommand_a308c23ce0e97c2cf64a24a67e63e8cf9} 
+\index{ToggleOnCommand@{ToggleOnCommand}!execute@{execute}}
+\index{execute@{execute}!ToggleOnCommand@{ToggleOnCommand}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily void Toggle\+On\+Command\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Executes the command to toggle the device state. 
+
+This method checks the current state and executes either the on or off command to toggle the device\textquotesingle{}s power state accordingly. 
+
+Implements \mbox{\hyperlink{classHomeCommand_aea7d6dcccc5fcd1694c377c2ba62a574}{Home\+Command}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Toggle\+On\+Command.\+h\item 
+Toggle\+On\+Command.\+cpp\end{DoxyCompactItemize}

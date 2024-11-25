@@ -1,0 +1,32 @@
+\doxysection{Room.\+h}
+\hypertarget{Room_8h_source}{}\label{Room_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ ROOM\_H}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ ROOM\_H}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <bits/stdc++.h>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}Device.h"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classRoom}{Room}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classDevice}{Device}}}
+\DoxyCodeLine{00023\ \{}
+\DoxyCodeLine{00024\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00025\ \ \ \ \ std::vector<Device\ *>\ devices;\ }
+\DoxyCodeLine{00026\ \ \ \ \ std::string\ roomName;\ }
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{classRoom}{Room}}(std::string\ name\ =\ \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRoom_a43960d85d046a4afbb607fc327878658}{addDevice}}(\mbox{\hyperlink{classDevice}{Device}}\ *device);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRoom_a10cb545ffe9400d94ae3e024b57b5798}{removeDevice}}(\mbox{\hyperlink{classDevice}{Device}}\ *device);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRoom_a2df2869177920377b821bf4fc6f1aa54}{performAction}}(std::string\ action);}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00073\ \ \ \ \ std::string\ \mbox{\hyperlink{classRoom_a395f173f88588699bdb467e213caaa61}{printState}}();}
+\DoxyCodeLine{00074\ \};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

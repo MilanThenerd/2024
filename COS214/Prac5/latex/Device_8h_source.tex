@@ -1,0 +1,43 @@
+\doxysection{Device.\+h}
+\hypertarget{Device_8h_source}{}\label{Device_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ DEVICE\_H}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ DEVICE\_H}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}DeviceState.h"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}OnState.h"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}OffState.h"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}LockedState.h"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}OpenState.h"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classDevice}{Device}}}
+\DoxyCodeLine{00026\ \{}
+\DoxyCodeLine{00027\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00028\ \ \ \mbox{\hyperlink{classDeviceState}{DeviceState}}\ \mbox{\hyperlink{classDevice_aa34b89102686c23cd989f836423c0abd}{state}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00029\ \ \ std::string\ \mbox{\hyperlink{classDevice_a06b952ae4a767b7f8fc040915f34e148}{type}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00030\ \ \ std::string\ \mbox{\hyperlink{classDevice_aa07acb3cbc8c6e2cfcfbf1be7f79b4d1}{id}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00037\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDevice_ab18ba637fff0faf48dac0bede86b636d}{generateId}}();}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00045\ \ \ std::string\ \mbox{\hyperlink{classDevice_aa356c49000a4a7eea1d014dd5245ff51}{getId}}();}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00054\ \ \ std::string\ \mbox{\hyperlink{classDevice_a6fc9f9ef64e36804e5bc3acd0eae4b72}{getStatus}}();}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00063\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDevice_af1ea8a64f4a39abb28230e0bf21c9ae1}{performAction}}(std::string\ action)\ =\ 0;}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00070\ \ \ std::string\ \mbox{\hyperlink{classDevice_a6538eb1ee454e68b8acfd8de441e4de4}{getDeviceType}}();}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00078\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDevice_a55ca9daf69939603472d3007f1967177}{notify}}();\ \textcolor{comment}{//\ TODO:\ check\ if\ we\ need\ to\ make\ this\ pure\ virtual}}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00087\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDevice_a8ec51121f85da1c00fa031804301743d}{setState}}(\mbox{\hyperlink{classDeviceState}{DeviceState}}\ s);}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00097\ \ \ \textcolor{keyword}{virtual}\ std::string\ \mbox{\hyperlink{classDevice_ab1f7a52740cec6936b3881d2d97cef5b}{printState}}()\ =\ 0;}
+\DoxyCodeLine{00098\ \};}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

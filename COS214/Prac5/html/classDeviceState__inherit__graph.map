@@ -1,0 +1,11 @@
+<map id="DeviceState" name="DeviceState">
+<area shape="rect" id="Node000001" title="The DeviceState class holds information about the device state." alt="" coords="167,5,268,31"/>
+<area shape="rect" id="Node000002" href="$classLockedState.html" title="The LockedState class simulates the state of a device being locked." alt="" coords="5,79,107,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="180,39,83,81,81,76,178,34"/>
+<area shape="rect" id="Node000003" href="$classOffState.html" title="The OffState class simulates the state of a device being turned off." alt="" coords="131,79,205,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="204,44,178,80,174,77,199,41"/>
+<area shape="rect" id="Node000004" href="$classOnState.html" title="The OnState class simulates the state of a device being turned on." alt="" coords="229,79,304,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="235,41,261,77,256,80,231,44"/>
+<area shape="rect" id="Node000005" href="$classOpenState.html" title="The OpenState class simulates the state of a device being open or unlocked." alt="" coords="328,79,419,104"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="256,34,349,76,347,81,254,39"/>
+</map>

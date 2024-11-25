@@ -1,0 +1,137 @@
+\doxysection{Doorlock Class Reference}
+\hypertarget{classDoorlock}{}\label{classDoorlock}\index{Doorlock@{Doorlock}}
+
+
+The \doxylink{classDoorlock}{Doorlock} class represents a simulated door lock device.  
+
+
+
+
+{\ttfamily \#include $<$Doorlock.\+h$>$}
+
+
+
+Inheritance diagram for Doorlock\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=140pt]{classDoorlock__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Doorlock\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=156pt]{classDoorlock__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDoorlock_a2b97f775112036579124eac904dca1fa}{Doorlock}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classDoorlock}{Doorlock} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDoorlock_a0e24f852e622fdfdf12f1634bc85c88c}{perform\+Action}} (std\+::string action)
+\begin{DoxyCompactList}\small\item\em Performs an action on the door lock. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classDoorlock_afabe85bba668c4e7f5756f812f68d6dc}{print\+State}} ()
+\begin{DoxyCompactList}\small\item\em Prints the current state of the door lock. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classDevice}{Device}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classDevice_aa356c49000a4a7eea1d014dd5245ff51}{get\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the unique ID of the device. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classDevice_a6fc9f9ef64e36804e5bc3acd0eae4b72}{get\+Status}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the current status of the device. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classDevice_a6538eb1ee454e68b8acfd8de441e4de4}{get\+Device\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the type of the device. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classDevice_a55ca9daf69939603472d3007f1967177}{notify}} ()
+\begin{DoxyCompactList}\small\item\em Notifies any observers of a change in the device\textquotesingle{}s state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDevice_a8ec51121f85da1c00fa031804301743d}{set\+State}} (\mbox{\hyperlink{classDeviceState}{Device\+State}} s)
+\begin{DoxyCompactList}\small\item\em Sets the current state of the device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classDevice}{Device}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classDevice_ab18ba637fff0faf48dac0bede86b636d}{generate\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Generates a unique identifier for the device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classDevice}{Device}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDeviceState}{Device\+State}} {\bfseries state}
+\begin{DoxyCompactList}\small\item\em Current state of the device. \end{DoxyCompactList}\item 
+std\+::string {\bfseries type}
+\begin{DoxyCompactList}\small\item\em Type of the device (e.\+g., sensor) \end{DoxyCompactList}\item 
+std\+::string {\bfseries id}
+\begin{DoxyCompactList}\small\item\em Unique identifier for the device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{classDoorlock}{Doorlock} class represents a simulated door lock device. 
+
+This class simulates a door lock and inherits from the \doxylink{classDevice}{Device} class.
+
+This class provides concrete implementations for the perform\+Action and print\+State methods from the base \doxylink{classDevice}{Device} class, enabling the simulation of a door lock\textquotesingle{}s behavior.
+
+The \doxylink{classDoorlock}{Doorlock} class provides specific functionality for a door lock device, including actions to manipulate its state (lock, unlock, etc.), and printing the current state. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classDoorlock_a2b97f775112036579124eac904dca1fa}\label{classDoorlock_a2b97f775112036579124eac904dca1fa} 
+\index{Doorlock@{Doorlock}!Doorlock@{Doorlock}}
+\index{Doorlock@{Doorlock}!Doorlock@{Doorlock}}
+\doxysubsubsection{\texorpdfstring{Doorlock()}{Doorlock()}}
+{\footnotesize\ttfamily Doorlock\+::\+Doorlock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructs a new \doxylink{classDoorlock}{Doorlock} object. 
+
+Initializes a \doxylink{classDoorlock}{Doorlock} with default values. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classDoorlock_a0e24f852e622fdfdf12f1634bc85c88c}\label{classDoorlock_a0e24f852e622fdfdf12f1634bc85c88c} 
+\index{Doorlock@{Doorlock}!performAction@{performAction}}
+\index{performAction@{performAction}!Doorlock@{Doorlock}}
+\doxysubsubsection{\texorpdfstring{performAction()}{performAction()}}
+{\footnotesize\ttfamily void Doorlock\+::perform\+Action (\begin{DoxyParamCaption}\item[{std\+::string}]{action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Performs an action on the door lock. 
+
+This function allows the door lock to perform specific actions based on the input string. Possible actions might include "{}lock"{}, "{}unlock"{}, etc.
+
+
+\begin{DoxyParams}{Parameters}
+{\em action} & A string representing the action to be performed on the door lock. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classDevice_af1ea8a64f4a39abb28230e0bf21c9ae1}{Device}}.
+
+\Hypertarget{classDoorlock_afabe85bba668c4e7f5756f812f68d6dc}\label{classDoorlock_afabe85bba668c4e7f5756f812f68d6dc} 
+\index{Doorlock@{Doorlock}!printState@{printState}}
+\index{printState@{printState}!Doorlock@{Doorlock}}
+\doxysubsubsection{\texorpdfstring{printState()}{printState()}}
+{\footnotesize\ttfamily std\+::string Doorlock\+::print\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Prints the current state of the door lock. 
+
+This function returns a string representation of the current state of the door lock.
+
+\begin{DoxyReturn}{Returns}
+A string describing the current state of the door lock. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classDevice_ab1f7a52740cec6936b3881d2d97cef5b}{Device}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Doorlock.\+h\item 
+Doorlock.\+cpp\end{DoxyCompactItemize}

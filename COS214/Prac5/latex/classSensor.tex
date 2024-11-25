@@ -1,0 +1,168 @@
+\doxysection{Sensor Class Reference}
+\hypertarget{classSensor}{}\label{classSensor}\index{Sensor@{Sensor}}
+
+
+The \doxylink{classSensor}{Sensor} class serves as a base for all sensor types in the system.  
+
+
+
+
+{\ttfamily \#include $<$Sensor.\+h$>$}
+
+
+
+Inheritance diagram for Sensor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{classSensor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Sensor\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=156pt]{classSensor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classSensor_ae3cf63da40494df923135ee24435099b}{perform\+Action}} (std\+::string action)=0
+\begin{DoxyCompactList}\small\item\em Performs an action associated with the sensor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classSensor_a28f6c06723240638d08874e41d60d086}{trigger}} ()=0
+\begin{DoxyCompactList}\small\item\em Triggers the sensor, causing it to perform its designated action. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSensor_aef5ecc78cae86024bc1886317a2d3a22}{add\+Device}} (\mbox{\hyperlink{classNotifyCommand}{Notify\+Command}} \texorpdfstring{$\ast$}{*}com)
+\begin{DoxyCompactList}\small\item\em Adds a notification command to the sensor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSensor_a5cc26b6eeade32b8d35919324964bd0d}{remove\+Device}} (\mbox{\hyperlink{classNotifyCommand}{Notify\+Command}} \texorpdfstring{$\ast$}{*}com)
+\begin{DoxyCompactList}\small\item\em Removes a notification command from the sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classDevice}{Device}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classDevice_aa356c49000a4a7eea1d014dd5245ff51}{get\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the unique ID of the device. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classDevice_a6fc9f9ef64e36804e5bc3acd0eae4b72}{get\+Status}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the current status of the device. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classDevice_a6538eb1ee454e68b8acfd8de441e4de4}{get\+Device\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the type of the device. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classDevice_a55ca9daf69939603472d3007f1967177}{notify}} ()
+\begin{DoxyCompactList}\small\item\em Notifies any observers of a change in the device\textquotesingle{}s state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDevice_a8ec51121f85da1c00fa031804301743d}{set\+State}} (\mbox{\hyperlink{classDeviceState}{Device\+State}} s)
+\begin{DoxyCompactList}\small\item\em Sets the current state of the device. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classDevice_ab1f7a52740cec6936b3881d2d97cef5b}{print\+State}} ()=0
+\begin{DoxyCompactList}\small\item\em Returns a string representation of the current state of the device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classSensor_ad0ddd51529e974767391d6667b32a6cd}\label{classSensor_ad0ddd51529e974767391d6667b32a6cd} 
+std\+::vector$<$ \mbox{\hyperlink{classNotifyCommand}{Notify\+Command}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries devices}
+\begin{DoxyCompactList}\small\item\em A vector of pointers to notification commands associated with the sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classDevice}{Device}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDeviceState}{Device\+State}} {\bfseries state}
+\begin{DoxyCompactList}\small\item\em Current state of the device. \end{DoxyCompactList}\item 
+std\+::string {\bfseries type}
+\begin{DoxyCompactList}\small\item\em Type of the device (e.\+g., sensor) \end{DoxyCompactList}\item 
+std\+::string {\bfseries id}
+\begin{DoxyCompactList}\small\item\em Unique identifier for the device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classDevice}{Device}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classDevice_ab18ba637fff0faf48dac0bede86b636d}{generate\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Generates a unique identifier for the device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{classSensor}{Sensor} class serves as a base for all sensor types in the system. 
+
+This class represents a generic sensor in a smart home system.
+
+This class allows for the addition and removal of notification commands and provides pure virtual methods for performing actions and triggering events specific to the type of sensor.
+
+The \doxylink{classSensor}{Sensor} class inherits from \doxylink{classDevice}{Device} and provides an interface for sensors that can trigger notifications and perform actions. It manages a collection of \doxylink{classNotifyCommand}{Notify\+Command} objects associated with the sensor. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classSensor_aef5ecc78cae86024bc1886317a2d3a22}\label{classSensor_aef5ecc78cae86024bc1886317a2d3a22} 
+\index{Sensor@{Sensor}!addDevice@{addDevice}}
+\index{addDevice@{addDevice}!Sensor@{Sensor}}
+\doxysubsubsection{\texorpdfstring{addDevice()}{addDevice()}}
+{\footnotesize\ttfamily void Sensor\+::add\+Device (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classNotifyCommand}{Notify\+Command}} \texorpdfstring{$\ast$}{*}}]{com }\end{DoxyParamCaption})}
+
+
+
+Adds a notification command to the sensor. 
+
+This function takes a pointer to a \doxylink{classNotifyCommand}{Notify\+Command} object and adds it to the sensor\textquotesingle{}s collection of devices.
+
+
+\begin{DoxyParams}{Parameters}
+{\em com} & A pointer to the \doxylink{classNotifyCommand}{Notify\+Command} object to be added. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classSensor_ae3cf63da40494df923135ee24435099b}\label{classSensor_ae3cf63da40494df923135ee24435099b} 
+\index{Sensor@{Sensor}!performAction@{performAction}}
+\index{performAction@{performAction}!Sensor@{Sensor}}
+\doxysubsubsection{\texorpdfstring{performAction()}{performAction()}}
+{\footnotesize\ttfamily virtual void Sensor\+::perform\+Action (\begin{DoxyParamCaption}\item[{std\+::string}]{action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Performs an action associated with the sensor. 
+
+This method is pure virtual and must be implemented by derived classes to specify the action to be performed when triggered.
+
+
+\begin{DoxyParams}{Parameters}
+{\em action} & The action to be performed by the sensor. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classDevice_af1ea8a64f4a39abb28230e0bf21c9ae1}{Device}}.
+
+
+
+Implemented in \mbox{\hyperlink{classMotionSensor_a721b511687cb33f7478a3b6329b9c9eb}{Motion\+Sensor}}, and \mbox{\hyperlink{classTemperatureSensor_aab667eeb5781820302bb52ef40042517}{Temperature\+Sensor}}.
+
+\Hypertarget{classSensor_a5cc26b6eeade32b8d35919324964bd0d}\label{classSensor_a5cc26b6eeade32b8d35919324964bd0d} 
+\index{Sensor@{Sensor}!removeDevice@{removeDevice}}
+\index{removeDevice@{removeDevice}!Sensor@{Sensor}}
+\doxysubsubsection{\texorpdfstring{removeDevice()}{removeDevice()}}
+{\footnotesize\ttfamily void Sensor\+::remove\+Device (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classNotifyCommand}{Notify\+Command}} \texorpdfstring{$\ast$}{*}}]{com }\end{DoxyParamCaption})}
+
+
+
+Removes a notification command from the sensor. 
+
+This function takes a pointer to a \doxylink{classNotifyCommand}{Notify\+Command} object and removes it from the sensor\textquotesingle{}s collection of devices if it exists.
+
+
+\begin{DoxyParams}{Parameters}
+{\em com} & A pointer to the \doxylink{classNotifyCommand}{Notify\+Command} object to be removed. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classSensor_a28f6c06723240638d08874e41d60d086}\label{classSensor_a28f6c06723240638d08874e41d60d086} 
+\index{Sensor@{Sensor}!trigger@{trigger}}
+\index{trigger@{trigger}!Sensor@{Sensor}}
+\doxysubsubsection{\texorpdfstring{trigger()}{trigger()}}
+{\footnotesize\ttfamily virtual void Sensor\+::trigger (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Triggers the sensor, causing it to perform its designated action. 
+
+This method is pure virtual and must be implemented by derived classes to define the behavior of the sensor when it is triggered. 
+
+Implemented in \mbox{\hyperlink{classMotionSensor_a635ecb466e8f1481e3eb4390ca578eeb}{Motion\+Sensor}}, and \mbox{\hyperlink{classTemperatureSensor_a0b272f45bdd47b6907a7f0315f753804}{Temperature\+Sensor}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Sensor.\+h\item 
+Sensor.\+cpp\end{DoxyCompactItemize}

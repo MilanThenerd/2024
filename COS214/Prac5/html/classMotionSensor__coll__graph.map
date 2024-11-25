@@ -1,0 +1,9 @@
+<map id="MotionSensor" name="MotionSensor">
+<area shape="rect" id="Node000001" title="The MotionSensor class simulates a motion sensor in a smart home system." alt="" coords="5,243,116,268"/>
+<area shape="rect" id="Node000002" href="$classSensor.html" title="The Sensor class serves as a base for all sensor types in the system." alt="" coords="27,168,94,193"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="63,208,63,242,58,242,58,208"/>
+<area shape="rect" id="Node000003" href="$classDevice.html" title="The Device class manages the state and identification of a sensor." alt="" coords="27,93,94,119"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="63,133,63,168,58,168,58,133"/>
+<area shape="rect" id="Node000004" href="$classDeviceState.html" title="The DeviceState class holds information about the device state." alt="" coords="10,5,111,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="63,45,63,93,58,93,58,45"/>
+</map>

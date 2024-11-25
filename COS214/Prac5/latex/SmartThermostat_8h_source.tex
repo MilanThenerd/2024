@@ -1,0 +1,29 @@
+\doxysection{Smart\+Thermostat.\+h}
+\hypertarget{SmartThermostat_8h_source}{}\label{SmartThermostat_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ SMARTTHERMOSTAT\_H}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ SMARTTHERMOSTAT\_H}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}Device.h"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classSmartThermostat}{SmartThermostat}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classDevice}{Device}}}
+\DoxyCodeLine{00020\ \{}
+\DoxyCodeLine{00021\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{double}\ temperature;\ }
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{classSmartThermostat}{SmartThermostat}}(\textcolor{keywordtype}{double}\ temp);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSmartThermostat_acf56e6e2c874b652b70ade9c0abba602}{performAction}}(std::string\ action);}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classSmartThermostat_a743717289fb2c605906698f4a3bc3221}{getTemperature}}();}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSmartThermostat_aa8b2d13a1dc67f98d30528b32b886400}{setTemperature}}(\textcolor{keywordtype}{double}\ temp);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{virtual}\ std::string\ \mbox{\hyperlink{classSmartThermostat_a119362a9538d52bcc5dba0b3aab7b09c}{printState}}();}
+\DoxyCodeLine{00059\ \};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

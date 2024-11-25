@@ -1,0 +1,9 @@
+<map id="SetTemperatureCommand" name="SetTemperatureCommand">
+<area shape="rect" id="Node000001" title="The SetTemperatureCommand class is used to set the temperature on a device." alt="" coords="5,256,197,281"/>
+<area shape="rect" id="Node000002" href="$classHomeCommand.html" title="The HomeCommand class serves as the base class for all command objects in the system." alt="" coords="37,181,165,207"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="104,221,104,256,99,256,99,221"/>
+<area shape="rect" id="Node000003" href="$classDevice.html" title="The Device class manages the state and identification of a sensor." alt="" coords="68,93,135,119"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="104,133,104,181,99,181,99,133"/>
+<area shape="rect" id="Node000004" href="$classDeviceState.html" title="The DeviceState class holds information about the device state." alt="" coords="51,5,152,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="104,45,104,93,99,93,99,45"/>
+</map>

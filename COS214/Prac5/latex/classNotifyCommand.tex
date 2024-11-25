@@ -1,0 +1,128 @@
+\doxysection{Notify\+Command Class Reference}
+\hypertarget{classNotifyCommand}{}\label{classNotifyCommand}\index{NotifyCommand@{NotifyCommand}}
+
+
+The \doxylink{classNotifyCommand}{Notify\+Command} class implements notification behavior for commands.  
+
+
+
+
+{\ttfamily \#include $<$Notify\+Command.\+h$>$}
+
+
+
+Inheritance diagram for Notify\+Command\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{classNotifyCommand__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Notify\+Command\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{classNotifyCommand__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classNotifyCommand_ad88f85577835cb4f443c5338deb6be69}{Notify\+Command}} (\mbox{\hyperlink{classDevice}{Device}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classHomeCommand_a9528b6d06cfa9f4e98b2e7ba58e63e68}{receiver}}, \mbox{\hyperlink{classHomeCommand}{Home\+Command}} \texorpdfstring{$\ast$}{*}command, std\+::string filter="{}"{}, std\+::string \mbox{\hyperlink{classHomeCommand_a96685daad4ff20c75786b0191e026e45}{target}}="{}"{})
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classNotifyCommand}{Notify\+Command} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNotifyCommand_af4de2eef1d66fc3b4ceb372f1d86cd4e}{execute}} ()
+\begin{DoxyCompactList}\small\item\em Executes the command. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNotifyCommand_ab555f1f51235295faf814568829025d3}{filter\+Execute}} (std\+::string value="{}"{})
+\begin{DoxyCompactList}\small\item\em Executes the command based on the filter condition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classHomeCommand}{Home\+Command}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classHomeCommand_adc75c50b5ee2fa3aa4a26729480d89bc}{Home\+Command}} (\mbox{\hyperlink{classDevice}{Device}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classHomeCommand_a9528b6d06cfa9f4e98b2e7ba58e63e68}{receiver}}, std\+::string \mbox{\hyperlink{classHomeCommand_a96685daad4ff20c75786b0191e026e45}{target}})
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classHomeCommand}{Home\+Command} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classHomeCommand_a0f94c8b8f174ac60dca1f6cfdfaa0824}{\texorpdfstring{$\sim$}{\string~}\+Home\+Command}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \doxylink{classHomeCommand}{Home\+Command} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classHomeCommand}{Home\+Command}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDevice}{Device}} \texorpdfstring{$\ast$}{*} {\bfseries receiver}
+\begin{DoxyCompactList}\small\item\em A pointer to the device that will execute the command. \end{DoxyCompactList}\item 
+std\+::string {\bfseries target}
+\begin{DoxyCompactList}\small\item\em The target on which the command will act. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{classNotifyCommand}{Notify\+Command} class implements notification behavior for commands. 
+
+This class represents a command that triggers notifications based on specific conditions.
+
+This class allows the execution of a \doxylink{classHomeCommand}{Home\+Command} while applying a filter, enabling specific actions to be taken based on the filter condition. It provides functionality to execute the command and execute it with a filter.
+
+The \doxylink{classNotifyCommand}{Notify\+Command} class inherits from \doxylink{classHomeCommand}{Home\+Command} and is designed to execute a command while applying a filter to determine whether to notify users or perform an action. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classNotifyCommand_ad88f85577835cb4f443c5338deb6be69}\label{classNotifyCommand_ad88f85577835cb4f443c5338deb6be69} 
+\index{NotifyCommand@{NotifyCommand}!NotifyCommand@{NotifyCommand}}
+\index{NotifyCommand@{NotifyCommand}!NotifyCommand@{NotifyCommand}}
+\doxysubsubsection{\texorpdfstring{NotifyCommand()}{NotifyCommand()}}
+{\footnotesize\ttfamily Notify\+Command\+::\+Notify\+Command (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDevice}{Device}} \texorpdfstring{$\ast$}{*}}]{receiver,  }\item[{\mbox{\hyperlink{classHomeCommand}{Home\+Command}} \texorpdfstring{$\ast$}{*}}]{command,  }\item[{std\+::string}]{filter = {\ttfamily "{}"{}},  }\item[{std\+::string}]{target = {\ttfamily "{}"{}} }\end{DoxyParamCaption})}
+
+
+
+Constructs a new \doxylink{classNotifyCommand}{Notify\+Command} object. 
+
+Initializes the \doxylink{classNotifyCommand}{Notify\+Command} with a receiver device, a command to execute, an optional filter, and an optional target.
+
+
+\begin{DoxyParams}{Parameters}
+{\em receiver} & A pointer to the device that will receive the command. \\
+\hline
+{\em command} & A pointer to the \doxylink{classHomeCommand}{Home\+Command} to be executed. \\
+\hline
+{\em filter} & An optional filter condition (default is an empty string). \\
+\hline
+{\em target} & An optional target entity, represented as a string (default is an empty string). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classNotifyCommand_af4de2eef1d66fc3b4ceb372f1d86cd4e}\label{classNotifyCommand_af4de2eef1d66fc3b4ceb372f1d86cd4e} 
+\index{NotifyCommand@{NotifyCommand}!execute@{execute}}
+\index{execute@{execute}!NotifyCommand@{NotifyCommand}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily void Notify\+Command\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Executes the command. 
+
+This function executes the command associated with this \doxylink{classNotifyCommand}{Notify\+Command}. It triggers the command to perform its action, regardless of the filter. 
+
+Implements \mbox{\hyperlink{classHomeCommand_aea7d6dcccc5fcd1694c377c2ba62a574}{Home\+Command}}.
+
+\Hypertarget{classNotifyCommand_ab555f1f51235295faf814568829025d3}\label{classNotifyCommand_ab555f1f51235295faf814568829025d3} 
+\index{NotifyCommand@{NotifyCommand}!filterExecute@{filterExecute}}
+\index{filterExecute@{filterExecute}!NotifyCommand@{NotifyCommand}}
+\doxysubsubsection{\texorpdfstring{filterExecute()}{filterExecute()}}
+{\footnotesize\ttfamily void Notify\+Command\+::filter\+Execute (\begin{DoxyParamCaption}\item[{std\+::string}]{value = {\ttfamily "{}"{}} }\end{DoxyParamCaption})}
+
+
+
+Executes the command based on the filter condition. 
+
+This function checks the specified value against the filter and executes the command only if the condition is met. If the filter is not met, it does not execute the command.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & A string representing the value to check against the filter (default is an empty string). \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Notify\+Command.\+h\item 
+Notify\+Command.\+cpp\end{DoxyCompactItemize}

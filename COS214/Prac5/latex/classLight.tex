@@ -1,0 +1,137 @@
+\doxysection{Light Class Reference}
+\hypertarget{classLight}{}\label{classLight}\index{Light@{Light}}
+
+
+The \doxylink{classLight}{Light} class represents a smart light device in a smart home system.  
+
+
+
+
+{\ttfamily \#include $<$Light.\+h$>$}
+
+
+
+Inheritance diagram for Light\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=130pt]{classLight__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Light\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=156pt]{classLight__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classLight_aeb5df09a25a32f19fdffa761268ba24f}{Light}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classLight}{Light} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLight_ae23d8609193941c4e76390d70e72e3a8}{perform\+Action}} (std\+::string action)
+\begin{DoxyCompactList}\small\item\em Performs an action on the light. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classLight_af89524ce368b3d4a092a3d8554d51e4d}{print\+State}} ()
+\begin{DoxyCompactList}\small\item\em Prints the current state of the light. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classDevice}{Device}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classDevice_aa356c49000a4a7eea1d014dd5245ff51}{get\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the unique ID of the device. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classDevice_a6fc9f9ef64e36804e5bc3acd0eae4b72}{get\+Status}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the current status of the device. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classDevice_a6538eb1ee454e68b8acfd8de441e4de4}{get\+Device\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the type of the device. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classDevice_a55ca9daf69939603472d3007f1967177}{notify}} ()
+\begin{DoxyCompactList}\small\item\em Notifies any observers of a change in the device\textquotesingle{}s state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDevice_a8ec51121f85da1c00fa031804301743d}{set\+State}} (\mbox{\hyperlink{classDeviceState}{Device\+State}} s)
+\begin{DoxyCompactList}\small\item\em Sets the current state of the device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classDevice}{Device}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classDevice_ab18ba637fff0faf48dac0bede86b636d}{generate\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Generates a unique identifier for the device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classDevice}{Device}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDeviceState}{Device\+State}} {\bfseries state}
+\begin{DoxyCompactList}\small\item\em Current state of the device. \end{DoxyCompactList}\item 
+std\+::string {\bfseries type}
+\begin{DoxyCompactList}\small\item\em Type of the device (e.\+g., sensor) \end{DoxyCompactList}\item 
+std\+::string {\bfseries id}
+\begin{DoxyCompactList}\small\item\em Unique identifier for the device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{classLight}{Light} class represents a smart light device in a smart home system. 
+
+This class represents a smart light in the smart home system.
+
+This class provides implementations for performing actions like turning the light on or off and printing the current state of the light. It inherits from the \doxylink{classDevice}{Device} class.
+
+The \doxylink{classLight}{Light} class provides functionality to control smart lights, inheriting from the \doxylink{classDevice}{Device} class. It allows the execution of actions like turning the light on or off, and it can display its current state. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classLight_aeb5df09a25a32f19fdffa761268ba24f}\label{classLight_aeb5df09a25a32f19fdffa761268ba24f} 
+\index{Light@{Light}!Light@{Light}}
+\index{Light@{Light}!Light@{Light}}
+\doxysubsubsection{\texorpdfstring{Light()}{Light()}}
+{\footnotesize\ttfamily Light\+::\+Light (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructs a new \doxylink{classLight}{Light} object. 
+
+Initializes the \doxylink{classLight}{Light} device with default parameters. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classLight_ae23d8609193941c4e76390d70e72e3a8}\label{classLight_ae23d8609193941c4e76390d70e72e3a8} 
+\index{Light@{Light}!performAction@{performAction}}
+\index{performAction@{performAction}!Light@{Light}}
+\doxysubsubsection{\texorpdfstring{performAction()}{performAction()}}
+{\footnotesize\ttfamily void Light\+::perform\+Action (\begin{DoxyParamCaption}\item[{std\+::string}]{action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Performs an action on the light. 
+
+This function allows the light to perform specific actions, such as turning on, turning off, or dimming.
+
+
+\begin{DoxyParams}{Parameters}
+{\em action} & A string representing the action to be performed on the light (e.\+g., "{}on"{}, "{}off"{}, "{}dim"{}). \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classDevice_af1ea8a64f4a39abb28230e0bf21c9ae1}{Device}}.
+
+\Hypertarget{classLight_af89524ce368b3d4a092a3d8554d51e4d}\label{classLight_af89524ce368b3d4a092a3d8554d51e4d} 
+\index{Light@{Light}!printState@{printState}}
+\index{printState@{printState}!Light@{Light}}
+\doxysubsubsection{\texorpdfstring{printState()}{printState()}}
+{\footnotesize\ttfamily std\+::string Light\+::print\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Prints the current state of the light. 
+
+This function returns a string representation of the light\textquotesingle{}s current state, such as whether it\textquotesingle{}s on or off.
+
+\begin{DoxyReturn}{Returns}
+A string describing the current state of the light. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classDevice_ab1f7a52740cec6936b3881d2d97cef5b}{Device}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Light.\+h\item 
+Light.\+cpp\end{DoxyCompactItemize}

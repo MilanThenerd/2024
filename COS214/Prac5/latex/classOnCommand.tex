@@ -1,0 +1,105 @@
+\doxysection{On\+Command Class Reference}
+\hypertarget{classOnCommand}{}\label{classOnCommand}\index{OnCommand@{OnCommand}}
+
+
+The \doxylink{classOnCommand}{On\+Command} class implements the command to switch on a device.  
+
+
+
+
+{\ttfamily \#include $<$On\+Command.\+h$>$}
+
+
+
+Inheritance diagram for On\+Command\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{classOnCommand__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for On\+Command\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{classOnCommand__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classOnCommand_a36623913832c78ae3ce1b9cc4a634241}{On\+Command}} (\mbox{\hyperlink{classDevice}{Device}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classHomeCommand_a9528b6d06cfa9f4e98b2e7ba58e63e68}{receiver}}, std\+::string \mbox{\hyperlink{classHomeCommand_a96685daad4ff20c75786b0191e026e45}{target}}="{}"{})
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classOnCommand}{On\+Command} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classOnCommand_ab6e61cd5c5d32f6eb023508fa83b2ea2}{execute}} ()
+\begin{DoxyCompactList}\small\item\em Executes the on command on the device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classHomeCommand}{Home\+Command}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classHomeCommand_adc75c50b5ee2fa3aa4a26729480d89bc}{Home\+Command}} (\mbox{\hyperlink{classDevice}{Device}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classHomeCommand_a9528b6d06cfa9f4e98b2e7ba58e63e68}{receiver}}, std\+::string \mbox{\hyperlink{classHomeCommand_a96685daad4ff20c75786b0191e026e45}{target}})
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classHomeCommand}{Home\+Command} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classHomeCommand_a0f94c8b8f174ac60dca1f6cfdfaa0824}{\texorpdfstring{$\sim$}{\string~}\+Home\+Command}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \doxylink{classHomeCommand}{Home\+Command} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classHomeCommand}{Home\+Command}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDevice}{Device}} \texorpdfstring{$\ast$}{*} {\bfseries receiver}
+\begin{DoxyCompactList}\small\item\em A pointer to the device that will execute the command. \end{DoxyCompactList}\item 
+std\+::string {\bfseries target}
+\begin{DoxyCompactList}\small\item\em The target on which the command will act. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{classOnCommand}{On\+Command} class implements the command to switch on a device. 
+
+This class represents a command to turn on a device.
+
+This class provides the functionality to execute the action of turning on a device. It sends the appropriate command to the receiver device when executed.
+
+The \doxylink{classOnCommand}{On\+Command} class inherits from \doxylink{classHomeCommand}{Home\+Command} and is used to execute the action of turning on a device, such as a light or appliance, in a smart home system. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classOnCommand_a36623913832c78ae3ce1b9cc4a634241}\label{classOnCommand_a36623913832c78ae3ce1b9cc4a634241} 
+\index{OnCommand@{OnCommand}!OnCommand@{OnCommand}}
+\index{OnCommand@{OnCommand}!OnCommand@{OnCommand}}
+\doxysubsubsection{\texorpdfstring{OnCommand()}{OnCommand()}}
+{\footnotesize\ttfamily On\+Command\+::\+On\+Command (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDevice}{Device}} \texorpdfstring{$\ast$}{*}}]{receiver,  }\item[{std\+::string}]{target = {\ttfamily "{}"{}} }\end{DoxyParamCaption})}
+
+
+
+Constructs a new \doxylink{classOnCommand}{On\+Command} object. 
+
+Initializes the \doxylink{classOnCommand}{On\+Command} with a receiver device and an optional target.
+
+
+\begin{DoxyParams}{Parameters}
+{\em receiver} & A pointer to the device that will be turned on. \\
+\hline
+{\em target} & An optional target entity, represented as a string (default is an empty string). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classOnCommand_ab6e61cd5c5d32f6eb023508fa83b2ea2}\label{classOnCommand_ab6e61cd5c5d32f6eb023508fa83b2ea2} 
+\index{OnCommand@{OnCommand}!execute@{execute}}
+\index{execute@{execute}!OnCommand@{OnCommand}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily void On\+Command\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Executes the on command on the device. 
+
+This function triggers the action to turn on the associated device. It communicates with the receiver device to change its state to on. 
+
+Implements \mbox{\hyperlink{classHomeCommand_aea7d6dcccc5fcd1694c377c2ba62a574}{Home\+Command}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+On\+Command.\+h\item 
+On\+Command.\+cpp\end{DoxyCompactItemize}

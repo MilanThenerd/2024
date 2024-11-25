@@ -1,0 +1,31 @@
+\doxysection{Smart\+Thermostat\+Integrator.\+h}
+\hypertarget{SmartThermostatIntegrator_8h_source}{}\label{SmartThermostatIntegrator_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ SMARTTHERMOSTATINTEGRATOR\_H}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ SMARTTHERMOSTATINTEGRATOR\_H}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}SmartThermostat.h"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}LegacyThermostat.h"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}cmath"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classSmartThermostatIntegrator}{SmartThermostatIntegrator}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classSmartThermostat}{SmartThermostat}}}
+\DoxyCodeLine{00023\ \{}
+\DoxyCodeLine{00024\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{classLegacyThermostat}{LegacyThermostat}}\ *thermostat;\ }
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{classSmartThermostatIntegrator}{SmartThermostatIntegrator}}(\mbox{\hyperlink{classLegacyThermostat}{LegacyThermostat}}\ *thermostat);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSmartThermostatIntegrator_a5a95fcc72ea58825de193297f67dadec}{initialize}}();}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classSmartThermostatIntegrator_a7df6cc6c86222c76a77954b845ed7914}{getTemperature}}();}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSmartThermostatIntegrator_add6641b0a8135b9e89f682f6ef13bc20}{setTemperature}}(\textcolor{keywordtype}{double}\ temp);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00064\ \ \ \ \ std::string\ \mbox{\hyperlink{classSmartThermostatIntegrator_ae4baee4111915a342526939d0b0e7488}{printState}}();}
+\DoxyCodeLine{00065\ \};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

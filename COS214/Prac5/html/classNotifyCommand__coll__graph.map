@@ -1,0 +1,9 @@
+<map id="NotifyCommand" name="NotifyCommand">
+<area shape="rect" id="Node000001" title="The NotifyCommand class implements notification behavior for commands." alt="" coords="5,256,133,281"/>
+<area shape="rect" id="Node000002" href="$classHomeCommand.html" title="The HomeCommand class serves as the base class for all command objects in the system." alt="" coords="5,181,133,207"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="72,221,72,256,67,256,67,221"/>
+<area shape="rect" id="Node000003" href="$classDevice.html" title="The Device class manages the state and identification of a sensor." alt="" coords="36,93,103,119"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="72,133,72,181,67,181,67,133"/>
+<area shape="rect" id="Node000004" href="$classDeviceState.html" title="The DeviceState class holds information about the device state." alt="" coords="19,5,120,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="72,45,72,93,67,93,67,45"/>
+</map>

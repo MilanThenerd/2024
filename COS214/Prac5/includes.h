@@ -1,0 +1,31 @@
+#ifndef INCLUDES_H
+#define INCLUDES_H
+#include "Device.h"
+#include "DeviceState.h"
+#include "Doorlock.h"
+#include "HomeCommand.h"
+#include "LegacyThermostat.h"
+#include "Light.h"
+#include "LockCommand.h"
+#include "LockedState.h"
+#include "MacroRoutine.h"
+#include "MotionSensor.h"
+#include "OffCommand.h"
+#include "OnCommand.h"
+#include "OnState.h"
+#include "OpenState.h"
+#include "Room.h"
+#include "Section.h"
+#include "Sensor.h"
+#include "SmartHomeSystem.h"
+#include "SmartThermostat.h"
+#include "SmartThermostatIntegrator.h"
+#include "TemperatureSensor.h"
+#include "ToggleOnCommand.h"
+#include "UnlockCommand.h"
+#include "SetTemperatureCommand.h"
+#include "NotifyCommand.h"
+#include "doctest.h"
+#endif
+
+#define TRUE 1

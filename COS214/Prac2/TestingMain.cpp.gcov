@@ -1,0 +1,52 @@
+        -:    0:Source:TestingMain.cpp
+        -:    0:Graph:TestingMain.gcno
+        -:    0:Data:TestingMain.gcda
+        -:    0:Runs:1
+        -:    1:#include <iostream>
+        -:    2:#include <sstream>
+        -:    3:#include "Game.h"
+        -:    4:#include <limits>
+        -:    5:
+        -:    6:using namespace std;
+        4:    7:void simulateCin(const string &input)
+        -:    8:{
+        -:    9:    // Save the original cin buffer
+        4:   10:    streambuf *original_cin_buf = cin.rdbuf();
+        -:   11:
+        -:   12:    try
+        -:   13:    {
+        -:   14:        // Redirect cin to read from the input string
+        4:   15:        istringstream input_stream(input);
+        4:   16:        cin.rdbuf(input_stream.rdbuf());
+        -:   17:
+        -:   18:        // Your game logic here, e.g., creating and running the game
+        4:   19:        Game *game = new Game(2, 10);
+        4:   20:        game->run();
+        4:   21:        delete game;
+        4:   22:    }
+    =====:   23:    catch (...)
+        -:   24:    {
+        -:   25:        // Ensure the original buffer is restored even if an exception occurs
+    =====:   26:        cin.rdbuf(original_cin_buf);
+    =====:   27:        throw; // Re-throw to maintain exception safety
+    =====:   28:    }
+        -:   29:
+        -:   30:    // Restore the original cin buffer
+        4:   31:    cin.clear();
+        4:   32:    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        4:   33:    cin.rdbuf(original_cin_buf);
+        4:   34:}
+        -:   35:
+        1:   36:void simulateGames()
+        -:   37:{
+        2:   38:    simulateCin("redo\nundo\nbuy\ninfantry\n\nbuy\nshieldbearer\n\nundo\nredo\nattack\ninfantry-0\n2\nshieldbearer-1\nyes\nyes\nyes\nyes\nyes\nyes\nyes\nyes\n\nattack\nattack\nshieldbearer-1\n1\n");
+        2:   39:    simulateCin("skip\nskip\nskip\nskip\nskip\nskip\nbuy\nboatman\n\nskip\nattack\nboatman-2\n2\n");
+        2:   40:    simulateCin("skip\nskip\nskip\nskip\nskip\nskip\nbuy\nboatman\n\nbuy\ninfantry\n\nattack\nboatman-3\n2\ninfantry-4\nno\n\nattack\ninfantry-4\n1\nboatman-3\nno\n\nundo\nundo\nredo\nredo\n\nskip\n\n\nattack\ninfantry-4\n1\nboatman-3\nyes\nyes\nyes\nyes\nyes\nyes\nskip\nattack\ninfantry-4\n1\n");
+        1:   41:    simulateCin("attack\nbuy\nback\nbuy\ninfantries\ninfantry\nundo\nundo\nundo\nredo\nredo\nlist\nattack\ninfatry-0\n2\nyes\nyes\nno\nstop\n");
+        1:   42:}
+        -:   43:
+        1:   44:int main()
+        -:   45:{
+        1:   46:    simulateGames();
+        1:   47:    return 0;
+        -:   48:}

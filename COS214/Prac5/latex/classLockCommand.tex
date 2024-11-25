@@ -1,0 +1,105 @@
+\doxysection{Lock\+Command Class Reference}
+\hypertarget{classLockCommand}{}\label{classLockCommand}\index{LockCommand@{LockCommand}}
+
+
+The \doxylink{classLockCommand}{Lock\+Command} class implements the command to lock a device.  
+
+
+
+
+{\ttfamily \#include $<$Lock\+Command.\+h$>$}
+
+
+
+Inheritance diagram for Lock\+Command\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{classLockCommand__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Lock\+Command\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{classLockCommand__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classLockCommand_ad1758357ab9352ba308594aa1332a65b}{Lock\+Command}} (\mbox{\hyperlink{classDevice}{Device}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classHomeCommand_a9528b6d06cfa9f4e98b2e7ba58e63e68}{receiver}}, std\+::string \mbox{\hyperlink{classHomeCommand_a96685daad4ff20c75786b0191e026e45}{target}}="{}"{})
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classLockCommand}{Lock\+Command} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLockCommand_ae5960858d3a8c82cc495068c5bfa77fa}{execute}} ()
+\begin{DoxyCompactList}\small\item\em Executes the lock command on the device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classHomeCommand}{Home\+Command}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classHomeCommand_adc75c50b5ee2fa3aa4a26729480d89bc}{Home\+Command}} (\mbox{\hyperlink{classDevice}{Device}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classHomeCommand_a9528b6d06cfa9f4e98b2e7ba58e63e68}{receiver}}, std\+::string \mbox{\hyperlink{classHomeCommand_a96685daad4ff20c75786b0191e026e45}{target}})
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classHomeCommand}{Home\+Command} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classHomeCommand_a0f94c8b8f174ac60dca1f6cfdfaa0824}{\texorpdfstring{$\sim$}{\string~}\+Home\+Command}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \doxylink{classHomeCommand}{Home\+Command} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classHomeCommand}{Home\+Command}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDevice}{Device}} \texorpdfstring{$\ast$}{*} {\bfseries receiver}
+\begin{DoxyCompactList}\small\item\em A pointer to the device that will execute the command. \end{DoxyCompactList}\item 
+std\+::string {\bfseries target}
+\begin{DoxyCompactList}\small\item\em The target on which the command will act. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{classLockCommand}{Lock\+Command} class implements the command to lock a device. 
+
+This class represents the \doxylink{classLockCommand}{Lock\+Command}, used to simulate locking devices such as the \doxylink{classDoorlock}{Doorlock}.
+
+This class is part of the command pattern implementation, sending a locking command to the device (receiver) to change its state to locked.
+
+The \doxylink{classLockCommand}{Lock\+Command} class inherits from the \doxylink{classHomeCommand}{Home\+Command} class and provides the functionality to lock a device by sending the appropriate command to the receiver (e.\+g., a \doxylink{classDoorlock}{Doorlock}). 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classLockCommand_ad1758357ab9352ba308594aa1332a65b}\label{classLockCommand_ad1758357ab9352ba308594aa1332a65b} 
+\index{LockCommand@{LockCommand}!LockCommand@{LockCommand}}
+\index{LockCommand@{LockCommand}!LockCommand@{LockCommand}}
+\doxysubsubsection{\texorpdfstring{LockCommand()}{LockCommand()}}
+{\footnotesize\ttfamily Lock\+Command\+::\+Lock\+Command (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDevice}{Device}} \texorpdfstring{$\ast$}{*}}]{receiver,  }\item[{std\+::string}]{target = {\ttfamily "{}"{}} }\end{DoxyParamCaption})}
+
+
+
+Constructs a new \doxylink{classLockCommand}{Lock\+Command} object. 
+
+Initializes the \doxylink{classLockCommand}{Lock\+Command} with a receiver device and an optional target.
+
+
+\begin{DoxyParams}{Parameters}
+{\em receiver} & A pointer to the device (e.\+g., \doxylink{classDoorlock}{Doorlock}) that will receive the lock command. \\
+\hline
+{\em target} & The target entity, represented as a string (optional, default is an empty string). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classLockCommand_ae5960858d3a8c82cc495068c5bfa77fa}\label{classLockCommand_ae5960858d3a8c82cc495068c5bfa77fa} 
+\index{LockCommand@{LockCommand}!execute@{execute}}
+\index{execute@{execute}!LockCommand@{LockCommand}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily void Lock\+Command\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Executes the lock command on the device. 
+
+This function sends the lock command to the receiver device, instructing it to change its state to locked. 
+
+Implements \mbox{\hyperlink{classHomeCommand_aea7d6dcccc5fcd1694c377c2ba62a574}{Home\+Command}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Lock\+Command.\+h\item 
+Lock\+Command.\+cpp\end{DoxyCompactItemize}

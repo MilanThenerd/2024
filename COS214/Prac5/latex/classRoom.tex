@@ -1,0 +1,180 @@
+\doxysection{Room Class Reference}
+\hypertarget{classRoom}{}\label{classRoom}\index{Room@{Room}}
+
+
+The \doxylink{classRoom}{Room} class manages a collection of devices in a smart home environment.  
+
+
+
+
+{\ttfamily \#include $<$Room.\+h$>$}
+
+
+
+Inheritance diagram for Room\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=130pt]{classRoom__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Room\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=156pt]{classRoom__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRoom_a032e0397ea692e0f194bea3e10a31d6e}{Room}} (std\+::string name="{}"{})
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classRoom}{Room} object with an optional name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRoom_a43960d85d046a4afbb607fc327878658}{add\+Device}} (\mbox{\hyperlink{classDevice}{Device}} \texorpdfstring{$\ast$}{*}device)
+\begin{DoxyCompactList}\small\item\em Adds a device to the room. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRoom_a10cb545ffe9400d94ae3e024b57b5798}{remove\+Device}} (\mbox{\hyperlink{classDevice}{Device}} \texorpdfstring{$\ast$}{*}device)
+\begin{DoxyCompactList}\small\item\em Removes a device from the room. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRoom_a2df2869177920377b821bf4fc6f1aa54}{perform\+Action}} (std\+::string action)
+\begin{DoxyCompactList}\small\item\em Performs an action on all devices in the room. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classRoom_a395f173f88588699bdb467e213caaa61}{print\+State}} ()
+\begin{DoxyCompactList}\small\item\em Prints the state of all devices in the room. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classDevice}{Device}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classDevice_aa356c49000a4a7eea1d014dd5245ff51}{get\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the unique ID of the device. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classDevice_a6fc9f9ef64e36804e5bc3acd0eae4b72}{get\+Status}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the current status of the device. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classDevice_a6538eb1ee454e68b8acfd8de441e4de4}{get\+Device\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the type of the device. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classDevice_a55ca9daf69939603472d3007f1967177}{notify}} ()
+\begin{DoxyCompactList}\small\item\em Notifies any observers of a change in the device\textquotesingle{}s state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDevice_a8ec51121f85da1c00fa031804301743d}{set\+State}} (\mbox{\hyperlink{classDeviceState}{Device\+State}} s)
+\begin{DoxyCompactList}\small\item\em Sets the current state of the device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classDevice}{Device}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classDevice_ab18ba637fff0faf48dac0bede86b636d}{generate\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Generates a unique identifier for the device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classDevice}{Device}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDeviceState}{Device\+State}} {\bfseries state}
+\begin{DoxyCompactList}\small\item\em Current state of the device. \end{DoxyCompactList}\item 
+std\+::string {\bfseries type}
+\begin{DoxyCompactList}\small\item\em Type of the device (e.\+g., sensor) \end{DoxyCompactList}\item 
+std\+::string {\bfseries id}
+\begin{DoxyCompactList}\small\item\em Unique identifier for the device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{classRoom}{Room} class manages a collection of devices in a smart home environment. 
+
+This class represents a room in a smart home system.
+
+This class allows users to interact with multiple devices in a specific room, facilitating actions such as adding or removing devices and controlling their states.
+
+The \doxylink{classRoom}{Room} class inherits from \doxylink{classDevice}{Device} and is used to manage multiple devices within a specific room. It provides functionality to add, remove, and perform actions on the devices contained within the room. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classRoom_a032e0397ea692e0f194bea3e10a31d6e}\label{classRoom_a032e0397ea692e0f194bea3e10a31d6e} 
+\index{Room@{Room}!Room@{Room}}
+\index{Room@{Room}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{Room()}{Room()}}
+{\footnotesize\ttfamily Room\+::\+Room (\begin{DoxyParamCaption}\item[{std\+::string}]{name = {\ttfamily "{}"{}} }\end{DoxyParamCaption})}
+
+
+
+Constructs a new \doxylink{classRoom}{Room} object with an optional name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the room (default is an empty string). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classRoom_a43960d85d046a4afbb607fc327878658}\label{classRoom_a43960d85d046a4afbb607fc327878658} 
+\index{Room@{Room}!addDevice@{addDevice}}
+\index{addDevice@{addDevice}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{addDevice()}{addDevice()}}
+{\footnotesize\ttfamily void Room\+::add\+Device (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDevice}{Device}} \texorpdfstring{$\ast$}{*}}]{device }\end{DoxyParamCaption})}
+
+
+
+Adds a device to the room. 
+
+This function takes a pointer to a \doxylink{classDevice}{Device} object and adds it to the room\textquotesingle{}s collection of devices.
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & A pointer to the \doxylink{classDevice}{Device} object to be added. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classRoom_a2df2869177920377b821bf4fc6f1aa54}\label{classRoom_a2df2869177920377b821bf4fc6f1aa54} 
+\index{Room@{Room}!performAction@{performAction}}
+\index{performAction@{performAction}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{performAction()}{performAction()}}
+{\footnotesize\ttfamily void Room\+::perform\+Action (\begin{DoxyParamCaption}\item[{std\+::string}]{action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Performs an action on all devices in the room. 
+
+This function sends the specified action to each device in the room.
+
+
+\begin{DoxyParams}{Parameters}
+{\em action} & The action to be performed on the devices. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classDevice_af1ea8a64f4a39abb28230e0bf21c9ae1}{Device}}.
+
+\Hypertarget{classRoom_a395f173f88588699bdb467e213caaa61}\label{classRoom_a395f173f88588699bdb467e213caaa61} 
+\index{Room@{Room}!printState@{printState}}
+\index{printState@{printState}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{printState()}{printState()}}
+{\footnotesize\ttfamily std\+::string Room\+::print\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Prints the state of all devices in the room. 
+
+This function generates a string representation of the current state of all devices in the room.
+
+\begin{DoxyReturn}{Returns}
+A string representing the state of the devices. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classDevice_ab1f7a52740cec6936b3881d2d97cef5b}{Device}}.
+
+\Hypertarget{classRoom_a10cb545ffe9400d94ae3e024b57b5798}\label{classRoom_a10cb545ffe9400d94ae3e024b57b5798} 
+\index{Room@{Room}!removeDevice@{removeDevice}}
+\index{removeDevice@{removeDevice}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{removeDevice()}{removeDevice()}}
+{\footnotesize\ttfamily void Room\+::remove\+Device (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDevice}{Device}} \texorpdfstring{$\ast$}{*}}]{device }\end{DoxyParamCaption})}
+
+
+
+Removes a device from the room. 
+
+This function takes a pointer to a \doxylink{classDevice}{Device} object and removes it from the room\textquotesingle{}s collection of devices if it exists.
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & A pointer to the \doxylink{classDevice}{Device} object to be removed. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Room.\+h\item 
+Room.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,200 @@
+\doxysection{Device Class Reference}
+\hypertarget{classDevice}{}\label{classDevice}\index{Device@{Device}}
+
+
+The \doxylink{classDevice}{Device} class manages the state and identification of a sensor.  
+
+
+
+
+{\ttfamily \#include $<$Device.\+h$>$}
+
+
+
+Inheritance diagram for Device\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDevice__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Device\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=156pt]{classDevice__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classDevice_aa356c49000a4a7eea1d014dd5245ff51}{get\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the unique ID of the device. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classDevice_a6fc9f9ef64e36804e5bc3acd0eae4b72}{get\+Status}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the current status of the device. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classDevice_af1ea8a64f4a39abb28230e0bf21c9ae1}{perform\+Action}} (std\+::string action)=0
+\begin{DoxyCompactList}\small\item\em Executes an action on the device. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classDevice_a6538eb1ee454e68b8acfd8de441e4de4}{get\+Device\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the type of the device. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classDevice_a55ca9daf69939603472d3007f1967177}{notify}} ()
+\begin{DoxyCompactList}\small\item\em Notifies any observers of a change in the device\textquotesingle{}s state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDevice_a8ec51121f85da1c00fa031804301743d}{set\+State}} (\mbox{\hyperlink{classDeviceState}{Device\+State}} s)
+\begin{DoxyCompactList}\small\item\em Sets the current state of the device. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classDevice_ab1f7a52740cec6936b3881d2d97cef5b}{print\+State}} ()=0
+\begin{DoxyCompactList}\small\item\em Returns a string representation of the current state of the device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classDevice_ab18ba637fff0faf48dac0bede86b636d}{generate\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Generates a unique identifier for the device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classDevice_aa34b89102686c23cd989f836423c0abd}\label{classDevice_aa34b89102686c23cd989f836423c0abd} 
+\mbox{\hyperlink{classDeviceState}{Device\+State}} {\bfseries state}
+\begin{DoxyCompactList}\small\item\em Current state of the device. \end{DoxyCompactList}\item 
+\Hypertarget{classDevice_a06b952ae4a767b7f8fc040915f34e148}\label{classDevice_a06b952ae4a767b7f8fc040915f34e148} 
+std\+::string {\bfseries type}
+\begin{DoxyCompactList}\small\item\em Type of the device (e.\+g., sensor) \end{DoxyCompactList}\item 
+\Hypertarget{classDevice_aa07acb3cbc8c6e2cfcfbf1be7f79b4d1}\label{classDevice_aa07acb3cbc8c6e2cfcfbf1be7f79b4d1} 
+std\+::string {\bfseries id}
+\begin{DoxyCompactList}\small\item\em Unique identifier for the device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{classDevice}{Device} class manages the state and identification of a sensor. 
+
+The \doxylink{classDevice}{Device} class serves as the base class for all sensors.
+
+The class includes methods for performing actions, retrieving the device\textquotesingle{}s status, and handling state changes. It also works with different concrete states like \doxylink{classOnState}{On\+State}, \doxylink{classOffState}{Off\+State}, \doxylink{classLockedState}{Locked\+State}, and \doxylink{classOpenState}{Open\+State}.
+
+This abstract class provides the common functionality for all devices, including state management, identification, and action execution. It works with various device states (\doxylink{classOnState}{On\+State}, \doxylink{classOffState}{Off\+State}, \doxylink{classLockedState}{Locked\+State}, \doxylink{classOpenState}{Open\+State}). 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classDevice_ab18ba637fff0faf48dac0bede86b636d}\label{classDevice_ab18ba637fff0faf48dac0bede86b636d} 
+\index{Device@{Device}!generateId@{generateId}}
+\index{generateId@{generateId}!Device@{Device}}
+\doxysubsubsection{\texorpdfstring{generateId()}{generateId()}}
+{\footnotesize\ttfamily void Device\+::generate\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Generates a unique identifier for the device. 
+
+This protected function is used to generate and assign a unique ID to the device. \Hypertarget{classDevice_a6538eb1ee454e68b8acfd8de441e4de4}\label{classDevice_a6538eb1ee454e68b8acfd8de441e4de4} 
+\index{Device@{Device}!getDeviceType@{getDeviceType}}
+\index{getDeviceType@{getDeviceType}!Device@{Device}}
+\doxysubsubsection{\texorpdfstring{getDeviceType()}{getDeviceType()}}
+{\footnotesize\ttfamily std\+::string Device\+::get\+Device\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieves the type of the device. 
+
+\begin{DoxyReturn}{Returns}
+A string representing the type of the device. 
+\end{DoxyReturn}
+\Hypertarget{classDevice_aa356c49000a4a7eea1d014dd5245ff51}\label{classDevice_aa356c49000a4a7eea1d014dd5245ff51} 
+\index{Device@{Device}!getId@{getId}}
+\index{getId@{getId}!Device@{Device}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily std\+::string Device\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieves the unique ID of the device. 
+
+\begin{DoxyReturn}{Returns}
+A string representing the unique ID of the device. 
+\end{DoxyReturn}
+\Hypertarget{classDevice_a6fc9f9ef64e36804e5bc3acd0eae4b72}\label{classDevice_a6fc9f9ef64e36804e5bc3acd0eae4b72} 
+\index{Device@{Device}!getStatus@{getStatus}}
+\index{getStatus@{getStatus}!Device@{Device}}
+\doxysubsubsection{\texorpdfstring{getStatus()}{getStatus()}}
+{\footnotesize\ttfamily std\+::string Device\+::get\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieves the current status of the device. 
+
+This function returns a string representation of the device\textquotesingle{}s current state.
+
+\begin{DoxyReturn}{Returns}
+A string describing the device\textquotesingle{}s current status. 
+\end{DoxyReturn}
+\Hypertarget{classDevice_a55ca9daf69939603472d3007f1967177}\label{classDevice_a55ca9daf69939603472d3007f1967177} 
+\index{Device@{Device}!notify@{notify}}
+\index{notify@{notify}!Device@{Device}}
+\doxysubsubsection{\texorpdfstring{notify()}{notify()}}
+{\footnotesize\ttfamily void Device\+::notify (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Notifies any observers of a change in the device\textquotesingle{}s state. 
+
+This function is responsible for notifying listeners of changes in the device\textquotesingle{}s state. It\textquotesingle{}s currently not a pure virtual function but could be modified to be pure virtual based on requirements. \Hypertarget{classDevice_af1ea8a64f4a39abb28230e0bf21c9ae1}\label{classDevice_af1ea8a64f4a39abb28230e0bf21c9ae1} 
+\index{Device@{Device}!performAction@{performAction}}
+\index{performAction@{performAction}!Device@{Device}}
+\doxysubsubsection{\texorpdfstring{performAction()}{performAction()}}
+{\footnotesize\ttfamily virtual void Device\+::perform\+Action (\begin{DoxyParamCaption}\item[{std\+::string}]{action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Executes an action on the device. 
+
+This pure virtual function must be implemented by derived classes to define specific actions the device can perform.
+
+
+\begin{DoxyParams}{Parameters}
+{\em action} & The action to be performed by the device. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classDoorlock_a0e24f852e622fdfdf12f1634bc85c88c}{Doorlock}}, \mbox{\hyperlink{classLight_ae23d8609193941c4e76390d70e72e3a8}{Light}}, \mbox{\hyperlink{classMotionSensor_a721b511687cb33f7478a3b6329b9c9eb}{Motion\+Sensor}}, \mbox{\hyperlink{classRoom_a2df2869177920377b821bf4fc6f1aa54}{Room}}, \mbox{\hyperlink{classSection_acbe1bb834850b09d87f36d83b5ea4c89}{Section}}, \mbox{\hyperlink{classSmartThermostat_acf56e6e2c874b652b70ade9c0abba602}{Smart\+Thermostat}}, \mbox{\hyperlink{classTemperatureSensor_aab667eeb5781820302bb52ef40042517}{Temperature\+Sensor}}, and \mbox{\hyperlink{classSensor_ae3cf63da40494df923135ee24435099b}{Sensor}}.
+
+\Hypertarget{classDevice_ab1f7a52740cec6936b3881d2d97cef5b}\label{classDevice_ab1f7a52740cec6936b3881d2d97cef5b} 
+\index{Device@{Device}!printState@{printState}}
+\index{printState@{printState}!Device@{Device}}
+\doxysubsubsection{\texorpdfstring{printState()}{printState()}}
+{\footnotesize\ttfamily virtual std\+::string Device\+::print\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns a string representation of the current state of the device. 
+
+This pure virtual function must be implemented by derived classes to provide a formatted representation of the current device state.
+
+\begin{DoxyReturn}{Returns}
+A string representing the current state of the device. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classDoorlock_afabe85bba668c4e7f5756f812f68d6dc}{Doorlock}}, \mbox{\hyperlink{classLight_af89524ce368b3d4a092a3d8554d51e4d}{Light}}, \mbox{\hyperlink{classMotionSensor_acd937a7eabb0f204a026ee9849cf3073}{Motion\+Sensor}}, \mbox{\hyperlink{classRoom_a395f173f88588699bdb467e213caaa61}{Room}}, \mbox{\hyperlink{classSection_ae5a4ded67ddef640ae6e2584f72b768e}{Section}}, \mbox{\hyperlink{classSmartThermostat_a119362a9538d52bcc5dba0b3aab7b09c}{Smart\+Thermostat}}, \mbox{\hyperlink{classSmartThermostatIntegrator_ae4baee4111915a342526939d0b0e7488}{Smart\+Thermostat\+Integrator}}, and \mbox{\hyperlink{classTemperatureSensor_a5ffd93f26a0689521380222eef77243b}{Temperature\+Sensor}}.
+
+\Hypertarget{classDevice_a8ec51121f85da1c00fa031804301743d}\label{classDevice_a8ec51121f85da1c00fa031804301743d} 
+\index{Device@{Device}!setState@{setState}}
+\index{setState@{setState}!Device@{Device}}
+\doxysubsubsection{\texorpdfstring{setState()}{setState()}}
+{\footnotesize\ttfamily void Device\+::set\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDeviceState}{Device\+State}}}]{s }\end{DoxyParamCaption})}
+
+
+
+Sets the current state of the device. 
+
+This function is used to change the current state of the device to the given state.
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The new state to be set for the device. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Device.\+h\item 
+Device.\+cpp\end{DoxyCompactItemize}

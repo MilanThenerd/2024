@@ -1,0 +1,162 @@
+\doxysection{Macro\+Routine Class Reference}
+\hypertarget{classMacroRoutine}{}\label{classMacroRoutine}\index{MacroRoutine@{MacroRoutine}}
+
+
+The \doxylink{classMacroRoutine}{Macro\+Routine} class represents a macro that can execute a sequence of commands.  
+
+
+
+
+{\ttfamily \#include $<$Macro\+Routine.\+h$>$}
+
+
+
+Inheritance diagram for Macro\+Routine\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{classMacroRoutine__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Macro\+Routine\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{classMacroRoutine__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMacroRoutine_a0b516e9443fa4909a74c29dd9664b2e9}{Macro\+Routine}} (\mbox{\hyperlink{classDevice}{Device}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classHomeCommand_a9528b6d06cfa9f4e98b2e7ba58e63e68}{receiver}}, std\+::string name, std\+::string \mbox{\hyperlink{classHomeCommand_a96685daad4ff20c75786b0191e026e45}{target}}="{}"{})
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classMacroRoutine}{Macro\+Routine} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMacroRoutine_a9be008e6776157d943f2c637c8003129}{execute}} ()
+\begin{DoxyCompactList}\small\item\em Executes all commands in the macro. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMacroRoutine_aa0c2e640b74446f89c1f13e4d90f31a8}{add\+Command}} (\mbox{\hyperlink{classHomeCommand}{Home\+Command}} \texorpdfstring{$\ast$}{*}command)
+\begin{DoxyCompactList}\small\item\em Adds a command to the macro routine. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMacroRoutine_ab083f4b23a49db76ba4103359520a266}{remove\+Command}} (\mbox{\hyperlink{classHomeCommand}{Home\+Command}} \texorpdfstring{$\ast$}{*}command)
+\begin{DoxyCompactList}\small\item\em Removes a command from the macro routine. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classMacroRoutine_a7b8767038dc948a0e6eb9ca0708e61ef}{get\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the name of the macro routine. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classHomeCommand}{Home\+Command}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classHomeCommand_adc75c50b5ee2fa3aa4a26729480d89bc}{Home\+Command}} (\mbox{\hyperlink{classDevice}{Device}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classHomeCommand_a9528b6d06cfa9f4e98b2e7ba58e63e68}{receiver}}, std\+::string \mbox{\hyperlink{classHomeCommand_a96685daad4ff20c75786b0191e026e45}{target}})
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classHomeCommand}{Home\+Command} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classHomeCommand_a0f94c8b8f174ac60dca1f6cfdfaa0824}{\texorpdfstring{$\sim$}{\string~}\+Home\+Command}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \doxylink{classHomeCommand}{Home\+Command} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classHomeCommand}{Home\+Command}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDevice}{Device}} \texorpdfstring{$\ast$}{*} {\bfseries receiver}
+\begin{DoxyCompactList}\small\item\em A pointer to the device that will execute the command. \end{DoxyCompactList}\item 
+std\+::string {\bfseries target}
+\begin{DoxyCompactList}\small\item\em The target on which the command will act. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{classMacroRoutine}{Macro\+Routine} class represents a macro that can execute a sequence of commands. 
+
+This class automates the execution of multiple commands as part of a macro routine.
+
+This class allows users to group multiple \doxylink{classHomeCommand}{Home\+Command} objects and execute them in order, automating a series of tasks. It provides functionality for adding and removing commands from the macro.
+
+The \doxylink{classMacroRoutine}{Macro\+Routine} class inherits from \doxylink{classHomeCommand}{Home\+Command} and allows multiple commands to be grouped together and executed in sequence. This is useful for automating a series of actions on devices. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classMacroRoutine_a0b516e9443fa4909a74c29dd9664b2e9}\label{classMacroRoutine_a0b516e9443fa4909a74c29dd9664b2e9} 
+\index{MacroRoutine@{MacroRoutine}!MacroRoutine@{MacroRoutine}}
+\index{MacroRoutine@{MacroRoutine}!MacroRoutine@{MacroRoutine}}
+\doxysubsubsection{\texorpdfstring{MacroRoutine()}{MacroRoutine()}}
+{\footnotesize\ttfamily Macro\+Routine\+::\+Macro\+Routine (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDevice}{Device}} \texorpdfstring{$\ast$}{*}}]{receiver,  }\item[{std\+::string}]{name,  }\item[{std\+::string}]{target = {\ttfamily "{}"{}} }\end{DoxyParamCaption})}
+
+
+
+Constructs a new \doxylink{classMacroRoutine}{Macro\+Routine} object. 
+
+Initializes the \doxylink{classMacroRoutine}{Macro\+Routine} with a receiver device, a macro name, and an optional target.
+
+
+\begin{DoxyParams}{Parameters}
+{\em receiver} & A pointer to the device that will receive the commands. \\
+\hline
+{\em name} & The name of the macro routine. \\
+\hline
+{\em target} & An optional target entity, represented as a string (default is an empty string). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classMacroRoutine_aa0c2e640b74446f89c1f13e4d90f31a8}\label{classMacroRoutine_aa0c2e640b74446f89c1f13e4d90f31a8} 
+\index{MacroRoutine@{MacroRoutine}!addCommand@{addCommand}}
+\index{addCommand@{addCommand}!MacroRoutine@{MacroRoutine}}
+\doxysubsubsection{\texorpdfstring{addCommand()}{addCommand()}}
+{\footnotesize\ttfamily void Macro\+Routine\+::add\+Command (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classHomeCommand}{Home\+Command}} \texorpdfstring{$\ast$}{*}}]{command }\end{DoxyParamCaption})}
+
+
+
+Adds a command to the macro routine. 
+
+This function adds a \doxylink{classHomeCommand}{Home\+Command} object to the list of commands in the macro.
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & A pointer to the \doxylink{classHomeCommand}{Home\+Command} object to be added. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classMacroRoutine_a9be008e6776157d943f2c637c8003129}\label{classMacroRoutine_a9be008e6776157d943f2c637c8003129} 
+\index{MacroRoutine@{MacroRoutine}!execute@{execute}}
+\index{execute@{execute}!MacroRoutine@{MacroRoutine}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily void Macro\+Routine\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Executes all commands in the macro. 
+
+This function executes each \doxylink{classHomeCommand}{Home\+Command} in the macro\textquotesingle{}s list of commands in the order they were added. 
+
+Implements \mbox{\hyperlink{classHomeCommand_aea7d6dcccc5fcd1694c377c2ba62a574}{Home\+Command}}.
+
+\Hypertarget{classMacroRoutine_a7b8767038dc948a0e6eb9ca0708e61ef}\label{classMacroRoutine_a7b8767038dc948a0e6eb9ca0708e61ef} 
+\index{MacroRoutine@{MacroRoutine}!getName@{getName}}
+\index{getName@{getName}!MacroRoutine@{MacroRoutine}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily std\+::string Macro\+Routine\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieves the name of the macro routine. 
+
+This function returns the name of the macro routine.
+
+\begin{DoxyReturn}{Returns}
+A string representing the name of the macro. 
+\end{DoxyReturn}
+\Hypertarget{classMacroRoutine_ab083f4b23a49db76ba4103359520a266}\label{classMacroRoutine_ab083f4b23a49db76ba4103359520a266} 
+\index{MacroRoutine@{MacroRoutine}!removeCommand@{removeCommand}}
+\index{removeCommand@{removeCommand}!MacroRoutine@{MacroRoutine}}
+\doxysubsubsection{\texorpdfstring{removeCommand()}{removeCommand()}}
+{\footnotesize\ttfamily void Macro\+Routine\+::remove\+Command (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classHomeCommand}{Home\+Command}} \texorpdfstring{$\ast$}{*}}]{command }\end{DoxyParamCaption})}
+
+
+
+Removes a command from the macro routine. 
+
+This function removes a \doxylink{classHomeCommand}{Home\+Command} object from the list of commands in the macro.
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & A pointer to the \doxylink{classHomeCommand}{Home\+Command} object to be removed. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Macro\+Routine.\+h\item 
+Macro\+Routine.\+cpp\end{DoxyCompactItemize}

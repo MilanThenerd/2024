@@ -1,0 +1,195 @@
+\doxysection{Temperature\+Sensor Class Reference}
+\hypertarget{classTemperatureSensor}{}\label{classTemperatureSensor}\index{TemperatureSensor@{TemperatureSensor}}
+
+
+The \doxylink{classTemperatureSensor}{Temperature\+Sensor} class models a temperature sensor device.  
+
+
+
+
+{\ttfamily \#include $<$Temperature\+Sensor.\+h$>$}
+
+
+
+Inheritance diagram for Temperature\+Sensor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=191pt]{classTemperatureSensor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Temperature\+Sensor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=191pt]{classTemperatureSensor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTemperatureSensor_a2f8ba8784c8e8aebd3f88c402fb8319b}{Temperature\+Sensor}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classTemperatureSensor}{Temperature\+Sensor} object with an initial temperature. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTemperatureSensor_a213acf156cfad9bcba089c33632ae375}{set\+Temperature}} (double t)
+\begin{DoxyCompactList}\small\item\em Sets the temperature reading of the sensor. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classTemperatureSensor_a38175d6f8b8d77311e1ebdceb6c420f0}{get\+Temperature}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current temperature reading from the sensor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTemperatureSensor_aab667eeb5781820302bb52ef40042517}{perform\+Action}} (std\+::string action)
+\begin{DoxyCompactList}\small\item\em Performs an action based on the provided command for the sensor. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classTemperatureSensor_a5ffd93f26a0689521380222eef77243b}{print\+State}} ()
+\begin{DoxyCompactList}\small\item\em Prints the current state of the temperature sensor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTemperatureSensor_a0b272f45bdd47b6907a7f0315f753804}{trigger}} ()
+\begin{DoxyCompactList}\small\item\em Triggers an event or notification based on the current temperature reading. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classSensor}{Sensor}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classSensor_aef5ecc78cae86024bc1886317a2d3a22}{add\+Device}} (\mbox{\hyperlink{classNotifyCommand}{Notify\+Command}} \texorpdfstring{$\ast$}{*}com)
+\begin{DoxyCompactList}\small\item\em Adds a notification command to the sensor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSensor_a5cc26b6eeade32b8d35919324964bd0d}{remove\+Device}} (\mbox{\hyperlink{classNotifyCommand}{Notify\+Command}} \texorpdfstring{$\ast$}{*}com)
+\begin{DoxyCompactList}\small\item\em Removes a notification command from the sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classDevice}{Device}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classDevice_aa356c49000a4a7eea1d014dd5245ff51}{get\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the unique ID of the device. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classDevice_a6fc9f9ef64e36804e5bc3acd0eae4b72}{get\+Status}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the current status of the device. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classDevice_a6538eb1ee454e68b8acfd8de441e4de4}{get\+Device\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the type of the device. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classDevice_a55ca9daf69939603472d3007f1967177}{notify}} ()
+\begin{DoxyCompactList}\small\item\em Notifies any observers of a change in the device\textquotesingle{}s state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDevice_a8ec51121f85da1c00fa031804301743d}{set\+State}} (\mbox{\hyperlink{classDeviceState}{Device\+State}} s)
+\begin{DoxyCompactList}\small\item\em Sets the current state of the device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classDevice}{Device}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classDevice_ab18ba637fff0faf48dac0bede86b636d}{generate\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Generates a unique identifier for the device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classSensor}{Sensor}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classNotifyCommand}{Notify\+Command}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries devices}
+\begin{DoxyCompactList}\small\item\em A vector of pointers to notification commands associated with the sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classDevice}{Device}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDeviceState}{Device\+State}} {\bfseries state}
+\begin{DoxyCompactList}\small\item\em Current state of the device. \end{DoxyCompactList}\item 
+std\+::string {\bfseries type}
+\begin{DoxyCompactList}\small\item\em Type of the device (e.\+g., sensor) \end{DoxyCompactList}\item 
+std\+::string {\bfseries id}
+\begin{DoxyCompactList}\small\item\em Unique identifier for the device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{classTemperatureSensor}{Temperature\+Sensor} class models a temperature sensor device. 
+
+This class simulates a temperature sensor that inherits from \doxylink{classSensor}{Sensor}.
+
+This class provides functionality to set and get temperature values, perform actions based on those values, and trigger notifications to other devices or commands in the system.
+
+The \doxylink{classTemperatureSensor}{Temperature\+Sensor} class is used to read and set temperature values, as well as trigger actions based on temperature changes. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classTemperatureSensor_a2f8ba8784c8e8aebd3f88c402fb8319b}\label{classTemperatureSensor_a2f8ba8784c8e8aebd3f88c402fb8319b} 
+\index{TemperatureSensor@{TemperatureSensor}!TemperatureSensor@{TemperatureSensor}}
+\index{TemperatureSensor@{TemperatureSensor}!TemperatureSensor@{TemperatureSensor}}
+\doxysubsubsection{\texorpdfstring{TemperatureSensor()}{TemperatureSensor()}}
+{\footnotesize\ttfamily Temperature\+Sensor\+::\+Temperature\+Sensor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructs a new \doxylink{classTemperatureSensor}{Temperature\+Sensor} object with an initial temperature. 
+
+This constructor initializes the temperature sensor to a default value. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classTemperatureSensor_a38175d6f8b8d77311e1ebdceb6c420f0}\label{classTemperatureSensor_a38175d6f8b8d77311e1ebdceb6c420f0} 
+\index{TemperatureSensor@{TemperatureSensor}!getTemperature@{getTemperature}}
+\index{getTemperature@{getTemperature}!TemperatureSensor@{TemperatureSensor}}
+\doxysubsubsection{\texorpdfstring{getTemperature()}{getTemperature()}}
+{\footnotesize\ttfamily double Temperature\+Sensor\+::get\+Temperature (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the current temperature reading from the sensor. 
+
+\begin{DoxyReturn}{Returns}
+The current temperature value of the sensor. 
+\end{DoxyReturn}
+\Hypertarget{classTemperatureSensor_aab667eeb5781820302bb52ef40042517}\label{classTemperatureSensor_aab667eeb5781820302bb52ef40042517} 
+\index{TemperatureSensor@{TemperatureSensor}!performAction@{performAction}}
+\index{performAction@{performAction}!TemperatureSensor@{TemperatureSensor}}
+\doxysubsubsection{\texorpdfstring{performAction()}{performAction()}}
+{\footnotesize\ttfamily void Temperature\+Sensor\+::perform\+Action (\begin{DoxyParamCaption}\item[{std\+::string}]{action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Performs an action based on the provided command for the sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em action} & A string representing the action to perform (e.\+g., read, update). \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classSensor_ae3cf63da40494df923135ee24435099b}{Sensor}}.
+
+\Hypertarget{classTemperatureSensor_a5ffd93f26a0689521380222eef77243b}\label{classTemperatureSensor_a5ffd93f26a0689521380222eef77243b} 
+\index{TemperatureSensor@{TemperatureSensor}!printState@{printState}}
+\index{printState@{printState}!TemperatureSensor@{TemperatureSensor}}
+\doxysubsubsection{\texorpdfstring{printState()}{printState()}}
+{\footnotesize\ttfamily std\+::string Temperature\+Sensor\+::print\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Prints the current state of the temperature sensor. 
+
+\begin{DoxyReturn}{Returns}
+A string representation of the sensor\textquotesingle{}s state, including its current temperature. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classDevice_ab1f7a52740cec6936b3881d2d97cef5b}{Device}}.
+
+\Hypertarget{classTemperatureSensor_a213acf156cfad9bcba089c33632ae375}\label{classTemperatureSensor_a213acf156cfad9bcba089c33632ae375} 
+\index{TemperatureSensor@{TemperatureSensor}!setTemperature@{setTemperature}}
+\index{setTemperature@{setTemperature}!TemperatureSensor@{TemperatureSensor}}
+\doxysubsubsection{\texorpdfstring{setTemperature()}{setTemperature()}}
+{\footnotesize\ttfamily void Temperature\+Sensor\+::set\+Temperature (\begin{DoxyParamCaption}\item[{double}]{t }\end{DoxyParamCaption})}
+
+
+
+Sets the temperature reading of the sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & The temperature value to set for the sensor. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classTemperatureSensor_a0b272f45bdd47b6907a7f0315f753804}\label{classTemperatureSensor_a0b272f45bdd47b6907a7f0315f753804} 
+\index{TemperatureSensor@{TemperatureSensor}!trigger@{trigger}}
+\index{trigger@{trigger}!TemperatureSensor@{TemperatureSensor}}
+\doxysubsubsection{\texorpdfstring{trigger()}{trigger()}}
+{\footnotesize\ttfamily void Temperature\+Sensor\+::trigger (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Triggers an event or notification based on the current temperature reading. 
+
+This method can be used to notify other devices or commands when the temperature exceeds a certain threshold or changes significantly. 
+
+Implements \mbox{\hyperlink{classSensor_a28f6c06723240638d08874e41d60d086}{Sensor}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Temperature\+Sensor.\+h\item 
+Temperature\+Sensor.\+cpp\end{DoxyCompactItemize}

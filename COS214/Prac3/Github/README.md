@@ -1,0 +1,19 @@
+# TODO:
+- [ ] Game "menu" Simon
+- [ ] Check abstract factory
+  - [ ] deployArtillery (Artillery fixed on certain cell on map/does it move with unit?)
+- [x] Draw/generate map Simon
+- [ ] "AI" player (Strategy) Simon
+  - [ ] TacticalCommand Simon
+  - [ ] BattleStrategy: (Flanking/Fortification/Ambush) Simon
+        - Different troops more likely to choose different strategy based on the terrain
+        - To showcase strategies we can just have printouts or we could make the battles slightly different
+  - [ ] Turns/game loop Simon
+- [ ] Memento
+  - [ ] Use memento to make more educated decisions for BattleStrategy (we can check if the battle was in our favor or not, choose a more/less risky approach based on unit+enemy health?)
+- [ ] Composite
+  - [ ] Units can join each other to form bigger legions - we can have them attack all at once, dont know how this will effect battlestrategy yet
+- [ ] UML Diagrams
+  - [ ] Class diagram
+  - [ ] Object diagram
+  - [ ] State diagram

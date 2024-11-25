@@ -1,0 +1,30 @@
+\doxysection{Sensor.\+h}
+\hypertarget{Sensor_8h_source}{}\label{Sensor_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ SENSOR\_H}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ SENSOR\_H}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}Device.h"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}NotifyCommand.h"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <bits/stdc++.h>}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classSensor}{Sensor}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classDevice}{Device}}}
+\DoxyCodeLine{00025\ \{}
+\DoxyCodeLine{00026\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00027\ \ \ \ \ std::vector<NotifyCommand\ *>\ \mbox{\hyperlink{classSensor_ad0ddd51529e974767391d6667b32a6cd}{devices}};\ }
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSensor_ae3cf63da40494df923135ee24435099b}{performAction}}(std::string\ action)\ =\ 0;}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSensor_a28f6c06723240638d08874e41d60d086}{trigger}}()\ =\ 0;}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSensor_aef5ecc78cae86024bc1886317a2d3a22}{addDevice}}(\mbox{\hyperlink{classNotifyCommand}{NotifyCommand}}\ *com);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSensor_a5cc26b6eeade32b8d35919324964bd0d}{removeDevice}}(\mbox{\hyperlink{classNotifyCommand}{NotifyCommand}}\ *com);}
+\DoxyCodeLine{00067\ \};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

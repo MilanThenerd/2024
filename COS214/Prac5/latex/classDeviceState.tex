@@ -1,0 +1,84 @@
+\doxysection{Device\+State Class Reference}
+\hypertarget{classDeviceState}{}\label{classDeviceState}\index{DeviceState@{DeviceState}}
+
+
+The \doxylink{classDeviceState}{Device\+State} class holds information about the device state.  
+
+
+
+
+{\ttfamily \#include $<$Device\+State.\+h$>$}
+
+
+
+Inheritance diagram for Device\+State\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDeviceState__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classDeviceState_a99b7dd95faee3434f151c2658edf0040}{get\+Description}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the description of the device state. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classDeviceState_a57aea826c6219120189d976941fa526c}{get\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the type of the device state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classDeviceState_a7f5930d3558bfed0c32554d6b6a042bb}\label{classDeviceState_a7f5930d3558bfed0c32554d6b6a042bb} 
+std\+::string {\bfseries type}
+\begin{DoxyCompactList}\small\item\em Type of the device state. \end{DoxyCompactList}\item 
+\Hypertarget{classDeviceState_ae56a6d7f04f7004a932d3cda01dce9a6}\label{classDeviceState_ae56a6d7f04f7004a932d3cda01dce9a6} 
+std\+::string {\bfseries description}
+\begin{DoxyCompactList}\small\item\em Description of the device state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{classDeviceState}{Device\+State} class holds information about the device state. 
+
+This class serves as the base for all states used by a \doxylink{classDevice}{Device}.
+
+The class contains methods to retrieve the type and description of the state.
+
+This abstract class holds the type and description of a device state. Derived classes will define specific behaviors for different states. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classDeviceState_a99b7dd95faee3434f151c2658edf0040}\label{classDeviceState_a99b7dd95faee3434f151c2658edf0040} 
+\index{DeviceState@{DeviceState}!getDescription@{getDescription}}
+\index{getDescription@{getDescription}!DeviceState@{DeviceState}}
+\doxysubsubsection{\texorpdfstring{getDescription()}{getDescription()}}
+{\footnotesize\ttfamily std\+::string Device\+State\+::get\+Description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieves the description of the device state. 
+
+This function returns a string that describes the current state of the device.
+
+\begin{DoxyReturn}{Returns}
+A string containing the description of the state. 
+\end{DoxyReturn}
+\Hypertarget{classDeviceState_a57aea826c6219120189d976941fa526c}\label{classDeviceState_a57aea826c6219120189d976941fa526c} 
+\index{DeviceState@{DeviceState}!getType@{getType}}
+\index{getType@{getType}!DeviceState@{DeviceState}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily std\+::string Device\+State\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieves the type of the device state. 
+
+This function returns a string that represents the type of the current device state.
+
+\begin{DoxyReturn}{Returns}
+A string containing the type of the state. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Device\+State.\+h\item 
+Device\+State.\+cpp\end{DoxyCompactItemize}

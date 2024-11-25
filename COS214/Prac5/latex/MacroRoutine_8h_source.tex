@@ -1,0 +1,34 @@
+\doxysection{Macro\+Routine.\+h}
+\hypertarget{MacroRoutine_8h_source}{}\label{MacroRoutine_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ MACROROUTINE\_H}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ MACROROUTINE\_H}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <bits/stdc++.h>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}HomeCommand.h"{}}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMacroRoutine}{MacroRoutine}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classHomeCommand}{HomeCommand}}}
+\DoxyCodeLine{00024\ \{}
+\DoxyCodeLine{00025\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00026\ \ \ \ \ std::string\ macroName;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00027\ \ \ \ \ std::vector<HomeCommand\ *>\ commands;\ \ \ \ \ }
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{classMacroRoutine}{MacroRoutine}}(\mbox{\hyperlink{classDevice}{Device}}\ *\mbox{\hyperlink{classHomeCommand_a9528b6d06cfa9f4e98b2e7ba58e63e68}{receiver}},\ std::string\ name,\ std::string\ \mbox{\hyperlink{classHomeCommand_a96685daad4ff20c75786b0191e026e45}{target}}\ =\ \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMacroRoutine_a9be008e6776157d943f2c637c8003129}{execute}}();}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMacroRoutine_aa0c2e640b74446f89c1f13e4d90f31a8}{addCommand}}(\mbox{\hyperlink{classHomeCommand}{HomeCommand}}\ *command);}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMacroRoutine_ab083f4b23a49db76ba4103359520a266}{removeCommand}}(\mbox{\hyperlink{classHomeCommand}{HomeCommand}}\ *command);}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00073\ \ \ \ \ std::string\ \mbox{\hyperlink{classMacroRoutine_a7b8767038dc948a0e6eb9ca0708e61ef}{getName}}();}
+\DoxyCodeLine{00074\ \};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

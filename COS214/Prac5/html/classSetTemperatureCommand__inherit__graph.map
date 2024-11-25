@@ -1,0 +1,5 @@
+<map id="SetTemperatureCommand" name="SetTemperatureCommand">
+<area shape="rect" id="Node000001" title="The SetTemperatureCommand class is used to set the temperature on a device." alt="" coords="5,79,197,104"/>
+<area shape="rect" id="Node000002" href="$classHomeCommand.html" title="The HomeCommand class serves as the base class for all command objects in the system." alt="" coords="37,5,165,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="104,44,104,79,99,79,99,44"/>
+</map>

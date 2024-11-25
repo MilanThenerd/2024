@@ -1,0 +1,33 @@
+\doxysection{Section.\+h}
+\hypertarget{Section_8h_source}{}\label{Section_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ SECTION\_H}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ SECTION\_H}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}Room.h"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}Device.h"{}}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classSection}{Section}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classDevice}{Device}}}
+\DoxyCodeLine{00024\ \{}
+\DoxyCodeLine{00025\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00026\ \ \ \ \ std::vector<Room\ *>\ rooms;\ }
+\DoxyCodeLine{00027\ \ \ \ \ std::string\ sectionName;\ }
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{classSection}{Section}}(std::string\ name\ =\ \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSection_a6a530da5909d3eb2f308853997d6eb41}{addRoom}}(\mbox{\hyperlink{classRoom}{Room}}\ *room);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSection_a140a28b96f9eee5937779e9420167d90}{removeRoom}}(\mbox{\hyperlink{classRoom}{Room}}\ *room);}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSection_acbe1bb834850b09d87f36d83b5ea4c89}{performAction}}(std::string\ action);}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00074\ \ \ \ \ std::string\ \mbox{\hyperlink{classSection_ae5a4ded67ddef640ae6e2584f72b768e}{printState}}();}
+\DoxyCodeLine{00075\ \};}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

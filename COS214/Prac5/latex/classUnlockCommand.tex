@@ -1,0 +1,105 @@
+\doxysection{Unlock\+Command Class Reference}
+\hypertarget{classUnlockCommand}{}\label{classUnlockCommand}\index{UnlockCommand@{UnlockCommand}}
+
+
+The \doxylink{classUnlockCommand}{Unlock\+Command} class is a concrete command for unlocking devices.  
+
+
+
+
+{\ttfamily \#include $<$Unlock\+Command.\+h$>$}
+
+
+
+Inheritance diagram for Unlock\+Command\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{classUnlockCommand__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Unlock\+Command\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{classUnlockCommand__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classUnlockCommand_ac0d1e45488192456be31a1b5c84e44cc}{Unlock\+Command}} (\mbox{\hyperlink{classDevice}{Device}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classHomeCommand_a9528b6d06cfa9f4e98b2e7ba58e63e68}{receiver}}, std\+::string \mbox{\hyperlink{classHomeCommand_a96685daad4ff20c75786b0191e026e45}{target}}="{}"{})
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classUnlockCommand}{Unlock\+Command} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUnlockCommand_a54def240354e99859816b9e3aad14a4a}{execute}} ()
+\begin{DoxyCompactList}\small\item\em Executes the unlock command. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classHomeCommand}{Home\+Command}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classHomeCommand_adc75c50b5ee2fa3aa4a26729480d89bc}{Home\+Command}} (\mbox{\hyperlink{classDevice}{Device}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classHomeCommand_a9528b6d06cfa9f4e98b2e7ba58e63e68}{receiver}}, std\+::string \mbox{\hyperlink{classHomeCommand_a96685daad4ff20c75786b0191e026e45}{target}})
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classHomeCommand}{Home\+Command} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classHomeCommand_a0f94c8b8f174ac60dca1f6cfdfaa0824}{\texorpdfstring{$\sim$}{\string~}\+Home\+Command}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \doxylink{classHomeCommand}{Home\+Command} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classHomeCommand}{Home\+Command}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDevice}{Device}} \texorpdfstring{$\ast$}{*} {\bfseries receiver}
+\begin{DoxyCompactList}\small\item\em A pointer to the device that will execute the command. \end{DoxyCompactList}\item 
+std\+::string {\bfseries target}
+\begin{DoxyCompactList}\small\item\em The target on which the command will act. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{classUnlockCommand}{Unlock\+Command} class is a concrete command for unlocking devices. 
+
+This class represents a command to unlock a device.
+
+This command is part of the command pattern and interacts with a specified device to change its state from locked to unlocked.
+
+The \doxylink{classUnlockCommand}{Unlock\+Command} class is used to issue an unlock command to a device, allowing the device to transition from a locked state to an unlocked state. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classUnlockCommand_ac0d1e45488192456be31a1b5c84e44cc}\label{classUnlockCommand_ac0d1e45488192456be31a1b5c84e44cc} 
+\index{UnlockCommand@{UnlockCommand}!UnlockCommand@{UnlockCommand}}
+\index{UnlockCommand@{UnlockCommand}!UnlockCommand@{UnlockCommand}}
+\doxysubsubsection{\texorpdfstring{UnlockCommand()}{UnlockCommand()}}
+{\footnotesize\ttfamily Unlock\+Command\+::\+Unlock\+Command (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDevice}{Device}} \texorpdfstring{$\ast$}{*}}]{receiver,  }\item[{std\+::string}]{target = {\ttfamily "{}"{}} }\end{DoxyParamCaption})}
+
+
+
+Constructs a new \doxylink{classUnlockCommand}{Unlock\+Command} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em receiver} & A pointer to the device that will be unlocked. \\
+\hline
+{\em target} & A string representing the target of the command (default is an empty string). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classUnlockCommand_a54def240354e99859816b9e3aad14a4a}\label{classUnlockCommand_a54def240354e99859816b9e3aad14a4a} 
+\index{UnlockCommand@{UnlockCommand}!execute@{execute}}
+\index{execute@{execute}!UnlockCommand@{UnlockCommand}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily void Unlock\+Command\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Executes the unlock command. 
+
+This method invokes the necessary actions to unlock the associated device. 
+
+Implements \mbox{\hyperlink{classHomeCommand_aea7d6dcccc5fcd1694c377c2ba62a574}{Home\+Command}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Unlock\+Command.\+h\item 
+Unlock\+Command.\+cpp\end{DoxyCompactItemize}

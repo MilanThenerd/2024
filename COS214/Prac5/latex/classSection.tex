@@ -1,0 +1,180 @@
+\doxysection{Section Class Reference}
+\hypertarget{classSection}{}\label{classSection}\index{Section@{Section}}
+
+
+The \doxylink{classSection}{Section} class manages a collection of rooms in a smart home environment.  
+
+
+
+
+{\ttfamily \#include $<$Section.\+h$>$}
+
+
+
+Inheritance diagram for Section\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=133pt]{classSection__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Section\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=156pt]{classSection__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSection_ad8034953f1b18ba5c621491604975ae3}{Section}} (std\+::string name="{}"{})
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classSection}{Section} object with an optional name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSection_a6a530da5909d3eb2f308853997d6eb41}{add\+Room}} (\mbox{\hyperlink{classRoom}{Room}} \texorpdfstring{$\ast$}{*}room)
+\begin{DoxyCompactList}\small\item\em Adds a room to the section. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSection_a140a28b96f9eee5937779e9420167d90}{remove\+Room}} (\mbox{\hyperlink{classRoom}{Room}} \texorpdfstring{$\ast$}{*}room)
+\begin{DoxyCompactList}\small\item\em Removes a room from the section. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSection_acbe1bb834850b09d87f36d83b5ea4c89}{perform\+Action}} (std\+::string action)
+\begin{DoxyCompactList}\small\item\em Performs an action on all rooms in the section. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classSection_ae5a4ded67ddef640ae6e2584f72b768e}{print\+State}} ()
+\begin{DoxyCompactList}\small\item\em Prints the state of all rooms in the section. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classDevice}{Device}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classDevice_aa356c49000a4a7eea1d014dd5245ff51}{get\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the unique ID of the device. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classDevice_a6fc9f9ef64e36804e5bc3acd0eae4b72}{get\+Status}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the current status of the device. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classDevice_a6538eb1ee454e68b8acfd8de441e4de4}{get\+Device\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the type of the device. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classDevice_a55ca9daf69939603472d3007f1967177}{notify}} ()
+\begin{DoxyCompactList}\small\item\em Notifies any observers of a change in the device\textquotesingle{}s state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDevice_a8ec51121f85da1c00fa031804301743d}{set\+State}} (\mbox{\hyperlink{classDeviceState}{Device\+State}} s)
+\begin{DoxyCompactList}\small\item\em Sets the current state of the device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classDevice}{Device}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classDevice_ab18ba637fff0faf48dac0bede86b636d}{generate\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Generates a unique identifier for the device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classDevice}{Device}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDeviceState}{Device\+State}} {\bfseries state}
+\begin{DoxyCompactList}\small\item\em Current state of the device. \end{DoxyCompactList}\item 
+std\+::string {\bfseries type}
+\begin{DoxyCompactList}\small\item\em Type of the device (e.\+g., sensor) \end{DoxyCompactList}\item 
+std\+::string {\bfseries id}
+\begin{DoxyCompactList}\small\item\em Unique identifier for the device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{classSection}{Section} class manages a collection of rooms in a smart home environment. 
+
+This class represents a section in a smart home system.
+
+This class allows users to interact with multiple rooms in a specific section, facilitating actions such as adding or removing rooms and controlling their states.
+
+The \doxylink{classSection}{Section} class inherits from \doxylink{classDevice}{Device} and is used to manage multiple rooms within a specific section of a building. It provides functionality to add, remove, and perform actions on the rooms contained within the section. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classSection_ad8034953f1b18ba5c621491604975ae3}\label{classSection_ad8034953f1b18ba5c621491604975ae3} 
+\index{Section@{Section}!Section@{Section}}
+\index{Section@{Section}!Section@{Section}}
+\doxysubsubsection{\texorpdfstring{Section()}{Section()}}
+{\footnotesize\ttfamily Section\+::\+Section (\begin{DoxyParamCaption}\item[{std\+::string}]{name = {\ttfamily "{}"{}} }\end{DoxyParamCaption})}
+
+
+
+Constructs a new \doxylink{classSection}{Section} object with an optional name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the section (default is an empty string). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classSection_a6a530da5909d3eb2f308853997d6eb41}\label{classSection_a6a530da5909d3eb2f308853997d6eb41} 
+\index{Section@{Section}!addRoom@{addRoom}}
+\index{addRoom@{addRoom}!Section@{Section}}
+\doxysubsubsection{\texorpdfstring{addRoom()}{addRoom()}}
+{\footnotesize\ttfamily void Section\+::add\+Room (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRoom}{Room}} \texorpdfstring{$\ast$}{*}}]{room }\end{DoxyParamCaption})}
+
+
+
+Adds a room to the section. 
+
+This function takes a pointer to a \doxylink{classRoom}{Room} object and adds it to the section\textquotesingle{}s collection of rooms.
+
+
+\begin{DoxyParams}{Parameters}
+{\em room} & A pointer to the \doxylink{classRoom}{Room} object to be added. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classSection_acbe1bb834850b09d87f36d83b5ea4c89}\label{classSection_acbe1bb834850b09d87f36d83b5ea4c89} 
+\index{Section@{Section}!performAction@{performAction}}
+\index{performAction@{performAction}!Section@{Section}}
+\doxysubsubsection{\texorpdfstring{performAction()}{performAction()}}
+{\footnotesize\ttfamily void Section\+::perform\+Action (\begin{DoxyParamCaption}\item[{std\+::string}]{action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Performs an action on all rooms in the section. 
+
+This function sends the specified action to each room in the section.
+
+
+\begin{DoxyParams}{Parameters}
+{\em action} & The action to be performed on the rooms. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classDevice_af1ea8a64f4a39abb28230e0bf21c9ae1}{Device}}.
+
+\Hypertarget{classSection_ae5a4ded67ddef640ae6e2584f72b768e}\label{classSection_ae5a4ded67ddef640ae6e2584f72b768e} 
+\index{Section@{Section}!printState@{printState}}
+\index{printState@{printState}!Section@{Section}}
+\doxysubsubsection{\texorpdfstring{printState()}{printState()}}
+{\footnotesize\ttfamily std\+::string Section\+::print\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Prints the state of all rooms in the section. 
+
+This function generates a string representation of the current state of all rooms in the section.
+
+\begin{DoxyReturn}{Returns}
+A string representing the state of the rooms. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classDevice_ab1f7a52740cec6936b3881d2d97cef5b}{Device}}.
+
+\Hypertarget{classSection_a140a28b96f9eee5937779e9420167d90}\label{classSection_a140a28b96f9eee5937779e9420167d90} 
+\index{Section@{Section}!removeRoom@{removeRoom}}
+\index{removeRoom@{removeRoom}!Section@{Section}}
+\doxysubsubsection{\texorpdfstring{removeRoom()}{removeRoom()}}
+{\footnotesize\ttfamily void Section\+::remove\+Room (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRoom}{Room}} \texorpdfstring{$\ast$}{*}}]{room }\end{DoxyParamCaption})}
+
+
+
+Removes a room from the section. 
+
+This function takes a pointer to a \doxylink{classRoom}{Room} object and removes it from the section\textquotesingle{}s collection of rooms if it exists.
+
+
+\begin{DoxyParams}{Parameters}
+{\em room} & A pointer to the \doxylink{classRoom}{Room} object to be removed. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Section.\+h\item 
+Section.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,42 @@
+\doxysection{Smart\+Home\+System.\+h}
+\hypertarget{SmartHomeSystem_8h_source}{}\label{SmartHomeSystem_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ SMARTHOMESYSTEM\_H}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ SMARTHOMESYSTEM\_H}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}includes.h"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classSmartHomeSystem}{SmartHomeSystem}}}
+\DoxyCodeLine{00023\ \{}
+\DoxyCodeLine{00024\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00025\ \ \ \ \ std::vector<Device*>\ devices;\ }
+\DoxyCodeLine{00026\ \ \ \ \ std::map<std::string,\ Room>\ rooms;\ }
+\DoxyCodeLine{00027\ \ \ \ \ std::map<std::string,\ Section>\ sections;\ }
+\DoxyCodeLine{00028\ \ \ \ \ std::map<std::string,\ MacroRoutine>\ routines;\ }
+\DoxyCodeLine{00029\ \ \ \ \ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ clearTerminal();}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{classSmartHomeSystem_a9e2eacd5019fb07f0ad990d27e3e74b3}{SmartHomeSystem}}();}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSmartHomeSystem_a374bab4d181bc7dac1ece9e3f7178904}{run}}();}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSmartHomeSystem_a89cb47a8cd3feab4d6654710d094498e}{addSection}}(std::string\ name);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSmartHomeSystem_a54589f5c495389db5bf76e20c422719a}{removeSection}}(std::string\ name);}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSmartHomeSystem_a25989ef556b6335f8b1740f5df75f53e}{addRoom}}(std::string\ roomName,\ std::string\ sectionName);}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSmartHomeSystem_a3588b71554526df8542cf180c51332c7}{removeRoom}}(std::string\ roomName,\ std::string\ sectionName);}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSmartHomeSystem_a3474887f8d486099de196b678e11b587}{addDevice}}(\textcolor{keywordtype}{int}\ type,\ std::string\ roomName);}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSmartHomeSystem_a046d9b9a623dfa4270cc7ebdb200f15a}{removeDevice}}(std::string\ deviceID);}
+\DoxyCodeLine{00112\ \};}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,5 @@
+<map id="Section" name="Section">
+<area shape="rect" id="Node000001" title="The Section class manages a collection of rooms in a smart home environment." alt="" coords="5,79,76,104"/>
+<area shape="rect" id="Node000002" href="$classDevice.html" title="The Device class manages the state and identification of a sensor." alt="" coords="7,5,74,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="43,44,43,79,38,79,38,44"/>
+</map>

@@ -1,0 +1,179 @@
+\doxysection{Smart\+Home\+System Class Reference}
+\hypertarget{classSmartHomeSystem}{}\label{classSmartHomeSystem}\index{SmartHomeSystem@{SmartHomeSystem}}
+
+
+The \doxylink{classSmartHomeSystem}{Smart\+Home\+System} class manages the overall functionality of a smart home.  
+
+
+
+
+{\ttfamily \#include $<$Smart\+Home\+System.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSmartHomeSystem_a9e2eacd5019fb07f0ad990d27e3e74b3}{Smart\+Home\+System}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classSmartHomeSystem}{Smart\+Home\+System} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSmartHomeSystem_a374bab4d181bc7dac1ece9e3f7178904}{run}} ()
+\begin{DoxyCompactList}\small\item\em Runs the smart home system. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSmartHomeSystem_a89cb47a8cd3feab4d6654710d094498e}{add\+Section}} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Adds a new section to the smart home system. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSmartHomeSystem_a54589f5c495389db5bf76e20c422719a}{remove\+Section}} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Removes a section from the smart home system. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSmartHomeSystem_a25989ef556b6335f8b1740f5df75f53e}{add\+Room}} (std\+::string room\+Name, std\+::string section\+Name)
+\begin{DoxyCompactList}\small\item\em Adds a new room to a specified section. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSmartHomeSystem_a3588b71554526df8542cf180c51332c7}{remove\+Room}} (std\+::string room\+Name, std\+::string section\+Name)
+\begin{DoxyCompactList}\small\item\em Removes a room from a specified section. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSmartHomeSystem_a3474887f8d486099de196b678e11b587}{add\+Device}} (int type, std\+::string room\+Name)
+\begin{DoxyCompactList}\small\item\em Adds a new device to a specified room. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSmartHomeSystem_a046d9b9a623dfa4270cc7ebdb200f15a}{remove\+Device}} (std\+::string device\+ID)
+\begin{DoxyCompactList}\small\item\em Removes a device from the smart home system. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{classSmartHomeSystem}{Smart\+Home\+System} class manages the overall functionality of a smart home. 
+
+This class represents the smart home system, managing devices, rooms, and sections.
+
+This class holds vectors and maps of devices, rooms, sections, and routines, enabling the organization and control of a smart home environment.
+
+The \doxylink{classSmartHomeSystem}{Smart\+Home\+System} class serves as the main controller for a smart home, allowing users to manage devices, rooms, sections, and routines. It provides functionality to add and remove these entities and to run the system. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classSmartHomeSystem_a9e2eacd5019fb07f0ad990d27e3e74b3}\label{classSmartHomeSystem_a9e2eacd5019fb07f0ad990d27e3e74b3} 
+\index{SmartHomeSystem@{SmartHomeSystem}!SmartHomeSystem@{SmartHomeSystem}}
+\index{SmartHomeSystem@{SmartHomeSystem}!SmartHomeSystem@{SmartHomeSystem}}
+\doxysubsubsection{\texorpdfstring{SmartHomeSystem()}{SmartHomeSystem()}}
+{\footnotesize\ttfamily Smart\+Home\+System\+::\+Smart\+Home\+System (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructs a new \doxylink{classSmartHomeSystem}{Smart\+Home\+System} object. 
+
+Initializes the smart home system, setting up any necessary configurations. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classSmartHomeSystem_a3474887f8d486099de196b678e11b587}\label{classSmartHomeSystem_a3474887f8d486099de196b678e11b587} 
+\index{SmartHomeSystem@{SmartHomeSystem}!addDevice@{addDevice}}
+\index{addDevice@{addDevice}!SmartHomeSystem@{SmartHomeSystem}}
+\doxysubsubsection{\texorpdfstring{addDevice()}{addDevice()}}
+{\footnotesize\ttfamily void Smart\+Home\+System\+::add\+Device (\begin{DoxyParamCaption}\item[{int}]{type,  }\item[{std\+::string}]{room\+Name }\end{DoxyParamCaption})}
+
+
+
+Adds a new device to a specified room. 
+
+This function creates a new device of the specified type and adds it to the specified room.
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & The type of the device to be added (represented as an integer). \\
+\hline
+{\em room\+Name} & The name of the room to which the device will be added. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classSmartHomeSystem_a25989ef556b6335f8b1740f5df75f53e}\label{classSmartHomeSystem_a25989ef556b6335f8b1740f5df75f53e} 
+\index{SmartHomeSystem@{SmartHomeSystem}!addRoom@{addRoom}}
+\index{addRoom@{addRoom}!SmartHomeSystem@{SmartHomeSystem}}
+\doxysubsubsection{\texorpdfstring{addRoom()}{addRoom()}}
+{\footnotesize\ttfamily void Smart\+Home\+System\+::add\+Room (\begin{DoxyParamCaption}\item[{std\+::string}]{room\+Name,  }\item[{std\+::string}]{section\+Name }\end{DoxyParamCaption})}
+
+
+
+Adds a new room to a specified section. 
+
+This function creates a new room within the specified section.
+
+
+\begin{DoxyParams}{Parameters}
+{\em room\+Name} & The name of the room to be added. \\
+\hline
+{\em section\+Name} & The name of the section to which the room will be added. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classSmartHomeSystem_a89cb47a8cd3feab4d6654710d094498e}\label{classSmartHomeSystem_a89cb47a8cd3feab4d6654710d094498e} 
+\index{SmartHomeSystem@{SmartHomeSystem}!addSection@{addSection}}
+\index{addSection@{addSection}!SmartHomeSystem@{SmartHomeSystem}}
+\doxysubsubsection{\texorpdfstring{addSection()}{addSection()}}
+{\footnotesize\ttfamily void Smart\+Home\+System\+::add\+Section (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+
+
+Adds a new section to the smart home system. 
+
+This function creates a new section with the specified name and adds it to the smart home system.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the section to be added. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classSmartHomeSystem_a046d9b9a623dfa4270cc7ebdb200f15a}\label{classSmartHomeSystem_a046d9b9a623dfa4270cc7ebdb200f15a} 
+\index{SmartHomeSystem@{SmartHomeSystem}!removeDevice@{removeDevice}}
+\index{removeDevice@{removeDevice}!SmartHomeSystem@{SmartHomeSystem}}
+\doxysubsubsection{\texorpdfstring{removeDevice()}{removeDevice()}}
+{\footnotesize\ttfamily void Smart\+Home\+System\+::remove\+Device (\begin{DoxyParamCaption}\item[{std\+::string}]{device\+ID }\end{DoxyParamCaption})}
+
+
+
+Removes a device from the smart home system. 
+
+This function removes the specified device from the system using its ID.
+
+
+\begin{DoxyParams}{Parameters}
+{\em device\+ID} & The ID of the device to be removed. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classSmartHomeSystem_a3588b71554526df8542cf180c51332c7}\label{classSmartHomeSystem_a3588b71554526df8542cf180c51332c7} 
+\index{SmartHomeSystem@{SmartHomeSystem}!removeRoom@{removeRoom}}
+\index{removeRoom@{removeRoom}!SmartHomeSystem@{SmartHomeSystem}}
+\doxysubsubsection{\texorpdfstring{removeRoom()}{removeRoom()}}
+{\footnotesize\ttfamily void Smart\+Home\+System\+::remove\+Room (\begin{DoxyParamCaption}\item[{std\+::string}]{room\+Name,  }\item[{std\+::string}]{section\+Name }\end{DoxyParamCaption})}
+
+
+
+Removes a room from a specified section. 
+
+This function removes the specified room from the specified section.
+
+
+\begin{DoxyParams}{Parameters}
+{\em room\+Name} & The name of the room to be removed. \\
+\hline
+{\em section\+Name} & The name of the section from which the room will be removed. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classSmartHomeSystem_a54589f5c495389db5bf76e20c422719a}\label{classSmartHomeSystem_a54589f5c495389db5bf76e20c422719a} 
+\index{SmartHomeSystem@{SmartHomeSystem}!removeSection@{removeSection}}
+\index{removeSection@{removeSection}!SmartHomeSystem@{SmartHomeSystem}}
+\doxysubsubsection{\texorpdfstring{removeSection()}{removeSection()}}
+{\footnotesize\ttfamily void Smart\+Home\+System\+::remove\+Section (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+
+
+Removes a section from the smart home system. 
+
+This function removes the specified section from the system, along with any associated rooms and devices.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the section to be removed. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classSmartHomeSystem_a374bab4d181bc7dac1ece9e3f7178904}\label{classSmartHomeSystem_a374bab4d181bc7dac1ece9e3f7178904} 
+\index{SmartHomeSystem@{SmartHomeSystem}!run@{run}}
+\index{run@{run}!SmartHomeSystem@{SmartHomeSystem}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Smart\+Home\+System\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Runs the smart home system. 
+
+This function starts the main loop of the smart home system, allowing users to interact with it and manage devices, rooms, and sections. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Smart\+Home\+System.\+h\item 
+Smart\+Home\+System.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,165 @@
+\doxysection{Motion\+Sensor Class Reference}
+\hypertarget{classMotionSensor}{}\label{classMotionSensor}\index{MotionSensor@{MotionSensor}}
+
+
+The \doxylink{classMotionSensor}{Motion\+Sensor} class simulates a motion sensor in a smart home system.  
+
+
+
+
+{\ttfamily \#include $<$Motion\+Sensor.\+h$>$}
+
+
+
+Inheritance diagram for Motion\+Sensor\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{classMotionSensor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Motion\+Sensor\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{classMotionSensor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMotionSensor_a719d6cc25a00c3f40e8bc3d944b5b3a9}{Motion\+Sensor}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classMotionSensor}{Motion\+Sensor} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMotionSensor_a721b511687cb33f7478a3b6329b9c9eb}{perform\+Action}} (std\+::string action)
+\begin{DoxyCompactList}\small\item\em Performs an action based on the specified command. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classMotionSensor_acd937a7eabb0f204a026ee9849cf3073}{print\+State}} ()
+\begin{DoxyCompactList}\small\item\em Prints the current state of the motion sensor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMotionSensor_a635ecb466e8f1481e3eb4390ca578eeb}{trigger}} ()
+\begin{DoxyCompactList}\small\item\em Triggers the motion sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classSensor}{Sensor}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classSensor_aef5ecc78cae86024bc1886317a2d3a22}{add\+Device}} (\mbox{\hyperlink{classNotifyCommand}{Notify\+Command}} \texorpdfstring{$\ast$}{*}com)
+\begin{DoxyCompactList}\small\item\em Adds a notification command to the sensor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSensor_a5cc26b6eeade32b8d35919324964bd0d}{remove\+Device}} (\mbox{\hyperlink{classNotifyCommand}{Notify\+Command}} \texorpdfstring{$\ast$}{*}com)
+\begin{DoxyCompactList}\small\item\em Removes a notification command from the sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classDevice}{Device}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classDevice_aa356c49000a4a7eea1d014dd5245ff51}{get\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the unique ID of the device. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classDevice_a6fc9f9ef64e36804e5bc3acd0eae4b72}{get\+Status}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the current status of the device. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classDevice_a6538eb1ee454e68b8acfd8de441e4de4}{get\+Device\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the type of the device. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classDevice_a55ca9daf69939603472d3007f1967177}{notify}} ()
+\begin{DoxyCompactList}\small\item\em Notifies any observers of a change in the device\textquotesingle{}s state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDevice_a8ec51121f85da1c00fa031804301743d}{set\+State}} (\mbox{\hyperlink{classDeviceState}{Device\+State}} s)
+\begin{DoxyCompactList}\small\item\em Sets the current state of the device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classDevice}{Device}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classDevice_ab18ba637fff0faf48dac0bede86b636d}{generate\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Generates a unique identifier for the device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classSensor}{Sensor}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classNotifyCommand}{Notify\+Command}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries devices}
+\begin{DoxyCompactList}\small\item\em A vector of pointers to notification commands associated with the sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classDevice}{Device}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDeviceState}{Device\+State}} {\bfseries state}
+\begin{DoxyCompactList}\small\item\em Current state of the device. \end{DoxyCompactList}\item 
+std\+::string {\bfseries type}
+\begin{DoxyCompactList}\small\item\em Type of the device (e.\+g., sensor) \end{DoxyCompactList}\item 
+std\+::string {\bfseries id}
+\begin{DoxyCompactList}\small\item\em Unique identifier for the device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{classMotionSensor}{Motion\+Sensor} class simulates a motion sensor in a smart home system. 
+
+This class represents a motion sensor that can trigger other devices.
+
+This class allows for the detection of motion and can trigger specific actions in other devices when motion is detected. It provides methods to perform actions and print its state.
+
+The \doxylink{classMotionSensor}{Motion\+Sensor} class inherits from the \doxylink{classSensor}{Sensor} class and simulates a motion sensor that detects motion and can trigger associated devices to perform actions. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classMotionSensor_a719d6cc25a00c3f40e8bc3d944b5b3a9}\label{classMotionSensor_a719d6cc25a00c3f40e8bc3d944b5b3a9} 
+\index{MotionSensor@{MotionSensor}!MotionSensor@{MotionSensor}}
+\index{MotionSensor@{MotionSensor}!MotionSensor@{MotionSensor}}
+\doxysubsubsection{\texorpdfstring{MotionSensor()}{MotionSensor()}}
+{\footnotesize\ttfamily Motion\+Sensor\+::\+Motion\+Sensor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructs a new \doxylink{classMotionSensor}{Motion\+Sensor} object. 
+
+Initializes the \doxylink{classMotionSensor}{Motion\+Sensor} with default parameters. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classMotionSensor_a721b511687cb33f7478a3b6329b9c9eb}\label{classMotionSensor_a721b511687cb33f7478a3b6329b9c9eb} 
+\index{MotionSensor@{MotionSensor}!performAction@{performAction}}
+\index{performAction@{performAction}!MotionSensor@{MotionSensor}}
+\doxysubsubsection{\texorpdfstring{performAction()}{performAction()}}
+{\footnotesize\ttfamily void Motion\+Sensor\+::perform\+Action (\begin{DoxyParamCaption}\item[{std\+::string}]{action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Performs an action based on the specified command. 
+
+This function allows the motion sensor to perform specific actions, such as turning on lights or sending alerts, depending on the action specified.
+
+
+\begin{DoxyParams}{Parameters}
+{\em action} & A string representing the action to be performed (e.\+g., "{}on"{}, "{}off"{}). \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classSensor_ae3cf63da40494df923135ee24435099b}{Sensor}}.
+
+\Hypertarget{classMotionSensor_acd937a7eabb0f204a026ee9849cf3073}\label{classMotionSensor_acd937a7eabb0f204a026ee9849cf3073} 
+\index{MotionSensor@{MotionSensor}!printState@{printState}}
+\index{printState@{printState}!MotionSensor@{MotionSensor}}
+\doxysubsubsection{\texorpdfstring{printState()}{printState()}}
+{\footnotesize\ttfamily std\+::string Motion\+Sensor\+::print\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Prints the current state of the motion sensor. 
+
+This function returns a string representation of the motion sensor\textquotesingle{}s current state, such as whether motion is detected or not.
+
+\begin{DoxyReturn}{Returns}
+A string describing the current state of the motion sensor. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classDevice_ab1f7a52740cec6936b3881d2d97cef5b}{Device}}.
+
+\Hypertarget{classMotionSensor_a635ecb466e8f1481e3eb4390ca578eeb}\label{classMotionSensor_a635ecb466e8f1481e3eb4390ca578eeb} 
+\index{MotionSensor@{MotionSensor}!trigger@{trigger}}
+\index{trigger@{trigger}!MotionSensor@{MotionSensor}}
+\doxysubsubsection{\texorpdfstring{trigger()}{trigger()}}
+{\footnotesize\ttfamily void Motion\+Sensor\+::trigger (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Triggers the motion sensor. 
+
+This function simulates the detection of motion and performs any associated actions, such as activating other devices. 
+
+Implements \mbox{\hyperlink{classSensor_a28f6c06723240638d08874e41d60d086}{Sensor}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Motion\+Sensor.\+h\item 
+Motion\+Sensor.\+cpp\end{DoxyCompactItemize}

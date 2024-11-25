@@ -1,0 +1,9 @@
+<map id="TemperatureSensor" name="TemperatureSensor">
+<area shape="rect" id="Node000001" title="The TemperatureSensor class models a temperature sensor device." alt="" coords="5,243,153,268"/>
+<area shape="rect" id="Node000002" href="$classSensor.html" title="The Sensor class serves as a base for all sensor types in the system." alt="" coords="46,168,113,193"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="82,208,82,242,77,242,77,208"/>
+<area shape="rect" id="Node000003" href="$classDevice.html" title="The Device class manages the state and identification of a sensor." alt="" coords="46,93,113,119"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="82,133,82,168,77,168,77,133"/>
+<area shape="rect" id="Node000004" href="$classDeviceState.html" title="The DeviceState class holds information about the device state." alt="" coords="29,5,130,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="82,45,82,93,77,93,77,45"/>
+</map>
